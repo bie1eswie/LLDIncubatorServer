@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97BA116C-D6A1-4EE0-A19B-66148B459090}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IncubatorRequirements.DALL</RootNamespace>
+    <AssemblyName>IncubatorRequirements.DALL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boolean.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Calculation.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CalculationMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientField.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientType.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DropdownSet.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DropdownSetMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DropdownValue.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldSet.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldSetGroup.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldSetGroupMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldSetMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldType.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DBConnector.cs" />
+    <Compile Include="Helpers\IncubatorEntities.cs" />
+    <Compile Include="IncubatorQuardrant.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncubatorRequirements.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncubatorRequirements.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncubatorRequirements.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncubatorRequirements.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncubatorRequirements.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IncubatorRequirementsManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuardrantMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RejectionReason.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Requirement.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RequirementMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItemStageMap.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItemStageReason.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItemStages.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItemStatu.cs">
+      <DependentUpon>IncubatorRequirements.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="IncubatorRequirements.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IncubatorRequirements.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IncubatorRequirements.edmx.diagram">
+      <DependentUpon>IncubatorRequirements.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IncubatorRequirements.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IncubatorRequirements.Context.cs</LastGenOutput>
+      <DependentUpon>IncubatorRequirements.edmx</DependentUpon>
+    </Content>
+    <Content Include="IncubatorRequirements.edmx.sql" />
+    <Content Include="IncubatorRequirements.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IncubatorRequirements.edmx</DependentUpon>
+      <LastGenOutput>IncubatorRequirements.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sefate.Incubator.WorkItem.DAL\Sefate.Incubator.WorkItem.DAL.csproj">
+      <Project>{A6ADAD30-69E1-4ED3-9F9F-D8CC6350BA94}</Project>
+      <Name>Sefate.Incubator.WorkItem.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

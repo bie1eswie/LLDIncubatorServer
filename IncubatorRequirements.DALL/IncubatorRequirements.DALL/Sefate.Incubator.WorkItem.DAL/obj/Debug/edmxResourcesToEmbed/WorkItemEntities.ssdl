@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IncubatorClientsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientTypeID" Type="int" />
+    <Property Name="ClientName" Type="varchar" MaxLength="250" />
+    <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ClientTypes">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="250" />
+    <Property Name="ClientTypeCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CommentPriorities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Priority" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CommentRecomendations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+    <Property Name="Response" Type="varchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CompanyUsers">
+    <Key>
+      <PropertyRef Name="CompanyUserID" />
+    </Key>
+    <Property Name="CompanyUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="ComponentChangeTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChangeType" Type="nchar" MaxLength="10" />
+    <Property Name="ChangedBy" Type="int" />
+    <Property Name="ChangedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DocumentReviewStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DocumentReview" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentName" Type="varchar" MaxLength="50" />
+    <Property Name="DocumentType" Type="varchar" MaxLength="50" />
+    <Property Name="Content" Type="varbinary(max)" />
+    <Property Name="ContentType" Type="varchar" MaxLength="250" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="ComponentRef" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="FieldMapCode" Type="varchar" MaxLength="50" />
+    <Property Name="Extension" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="URL" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="StatusID" Type="int" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentID" Type="int" />
+  </EntityType>
+  <EntityType Name="Emails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Recipients" Type="varchar" MaxLength="250" />
+    <Property Name="Body" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="EventGuests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="GuestName" Type="int" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="EventID" Type="int" />
+  </EntityType>
+  <EntityType Name="EventInvitations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="EventID" Type="int" />
+  </EntityType>
+  <EntityType Name="GroupRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupRole" Type="varchar" MaxLength="250" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="Role" Type="int" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Group" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IncubationStages">
+    <Key>
+      <PropertyRef Name="IncubationStageID" />
+    </Key>
+    <Property Name="IncubationStageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IncubationStageText" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IncubatorEvents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="EventType" Type="int" />
+    <Property Name="EventDescription" Type="varchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="IncubatorQuardrants">
+    <Key>
+      <PropertyRef Name="IncubatorQuardrantID" />
+    </Key>
+    <Property Name="IncubatorQuardrantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IncubatorQuardrantText" Type="varchar" MaxLength="50" />
+    <Property Name="IncubatorQuardrantCode" Type="varchar" MaxLength="50" />
+    <Property Name="ScoreCardValue" Type="int" />
+  </EntityType>
+  <EntityType Name="IncubatorQuarters">
+    <Key>
+      <PropertyRef Name="IncubatorQuarterID" />
+    </Key>
+    <Property Name="IncubatorQuarterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quarder" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="IncubatorQuardrantID" Type="int" />
+  </EntityType>
+  <EntityType Name="Milestones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="QuarterID" Type="int" />
+    <Property Name="ShortDescription" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleText" Type="varchar" MaxLength="50" />
+    <Property Name="RoleType" Type="int" />
+  </EntityType>
+  <EntityType Name="Stages">
+    <Key>
+      <PropertyRef Name="StageID" />
+    </Key>
+    <Property Name="StageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StageText" Type="varchar" MaxLength="50" />
+    <Property Name="StageCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="RoleID" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="250" />
+    <Property Name="UserLocked" Type="bit" />
+    <Property Name="Salt" Type="varchar" MaxLength="250" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="Fullname" Type="varchar" MaxLength="250" />
+    <Property Name="Surname" Type="varchar" MaxLength="250" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="GroupID" Type="int" />
+  </EntityType>
+  <EntityType Name="VarificationNumbers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="varchar" MaxLength="50" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkItemDocumentStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="StageID" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkItemFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="FieldCode" Type="varchar" MaxLength="50" />
+    <Property Name="FieldValue" Type="varchar" MaxLength="250" />
+    <Property Name="FieldSetCode" Type="varchar" MaxLength="50" />
+    <Property Name="MapCode" Type="varchar" MaxLength="50" />
+    <Property Name="ComponentRef" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WorkItemQuarterID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRelated" Type="bit" />
+  </EntityType>
+  <EntityType Name="WorkItemIncubationComments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommentText" Type="varchar(max)" />
+    <Property Name="CreatedDateTime" Type="datetime" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="PriorityID" Type="int" />
+    <Property Name="ShortDescription" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkItemIncubationStages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="IncubationSageID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WorkItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="WorkItemQuardrantID" Type="int" />
+    <Property Name="IsChecked" Type="bit" />
+  </EntityType>
+  <EntityType Name="WorkItemStages">
+    <Key>
+      <PropertyRef Name="WorkItemStageID" />
+    </Key>
+    <Property Name="WorkItemStageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StageID" Type="int" />
+    <Property Name="WorkItemID" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkItemStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="SatusCode" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkItemTimeLines">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IncubationStageID" Type="int" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="WorkItemStageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <Association Name="FK_Clients_ClientTypes">
+    <End Role="ClientTypes" Type="Self.ClientTypes" Multiplicity="0..1" />
+    <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientTypes">
+        <PropertyRef Name="ClientTypeID" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="ClientTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_WorkItem">
+    <End Role="WorkItems" Type="Self.WorkItems" Multiplicity="0..1" />
+    <End Role="Documents" Type="Self.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItems">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="WorkItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupRole_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="GroupRoles" Type="Self.GroupRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupRoles">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupRole_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="GroupRoles" Type="Self.GroupRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupRoles">
+        <PropertyRef Name="Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VarificationNumbers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="VarificationNumbers" Type="Self.VarificationNumbers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VarificationNumbers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkItem_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+    <End Role="WorkItems" Type="Self.WorkItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="WorkItems">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkItemField_WorkItem">
+    <End Role="WorkItems" Type="Self.WorkItems" Multiplicity="0..1" />
+    <End Role="WorkItemFields" Type="Self.WorkItemFields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItems">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WorkItemFields">
+        <PropertyRef Name="WorkItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IncubatorClientsModelStoreContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientTypes" EntityType="Self.ClientTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentPriorities" EntityType="Self.CommentPriorities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentRecomendations" EntityType="Self.CommentRecomendations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyUsers" EntityType="Self.CompanyUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ComponentChangeTypes" EntityType="Self.ComponentChangeTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentReviewStatus" EntityType="Self.DocumentReviewStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documents" EntityType="Self.Documents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentStatus" EntityType="Self.DocumentStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Emails" EntityType="Self.Emails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventGuests" EntityType="Self.EventGuests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventInvitations" EntityType="Self.EventInvitations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupRoles" EntityType="Self.GroupRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IncubationStages" EntityType="Self.IncubationStages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IncubatorEvents" EntityType="Self.IncubatorEvents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IncubatorQuardrants" EntityType="Self.IncubatorQuardrants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IncubatorQuarters" EntityType="Self.IncubatorQuarters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Milestones" EntityType="Self.Milestones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stages" EntityType="Self.Stages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VarificationNumbers" EntityType="Self.VarificationNumbers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemDocumentStatus" EntityType="Self.WorkItemDocumentStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemFields" EntityType="Self.WorkItemFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemIncubationComments" EntityType="Self.WorkItemIncubationComments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemIncubationStages" EntityType="Self.WorkItemIncubationStages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItems" EntityType="Self.WorkItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemStages" EntityType="Self.WorkItemStages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemStatus" EntityType="Self.WorkItemStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkItemTimeLines" EntityType="Self.WorkItemTimeLines" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Clients_ClientTypes" Association="Self.FK_Clients_ClientTypes">
+      <End Role="ClientTypes" EntitySet="ClientTypes" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_WorkItem" Association="Self.FK_Documents_WorkItem">
+      <End Role="WorkItems" EntitySet="WorkItems" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupRole_Groups" Association="Self.FK_GroupRole_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="GroupRoles" EntitySet="GroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupRole_Roles" Association="Self.FK_GroupRole_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="GroupRoles" EntitySet="GroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_Roles" Association="Self.FK_UserRole_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VarificationNumbers_Users" Association="Self.FK_VarificationNumbers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="VarificationNumbers" EntitySet="VarificationNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkItem_Clients" Association="Self.FK_WorkItem_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="WorkItems" EntitySet="WorkItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkItemField_WorkItem" Association="Self.FK_WorkItemField_WorkItem">
+      <End Role="WorkItems" EntitySet="WorkItems" />
+      <End Role="WorkItemFields" EntitySet="WorkItemFields" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

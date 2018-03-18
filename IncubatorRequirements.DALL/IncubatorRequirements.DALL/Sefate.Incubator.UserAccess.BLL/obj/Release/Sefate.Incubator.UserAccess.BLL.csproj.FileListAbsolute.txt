@@ -1,0 +1,11 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\Sefate.Incubator.UserAccess.BLL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\Sefate.Incubator.UserAccess.BLL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\Sefate.Incubator.UserAccess.BLL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\Safate.Incubator.UserAccess.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\Safate.Incubator.UserAccess.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\Safate.Incubator.UserAccess.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\bin\Release\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\obj\Release\Sefate.Incubator.UserAccess.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\obj\Release\Sefate.Incubator.UserAccess.BLL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.UserAccess.BLL\obj\Release\Sefate.Incubator.UserAccess.BLL.pdb

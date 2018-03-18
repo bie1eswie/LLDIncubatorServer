@@ -1,0 +1,18 @@
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.deps.json
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.runtimeconfig.json
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.runtimeconfig.dev.json
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.dll
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.pdb
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.AssemblyInfo.cs
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.dll
+C:\Users\Thapelo\Downloads\AngularWebpackVisualStudio-VS2017-angular-2 (1)\AngularWebpackVisualStudio-VS2017-angular-2\src\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.deps.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.runtimeconfig.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.runtimeconfig.dev.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\bin\Debug\netcoreapp1.1\AngularWebpackVisualStudio.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.AssemblyInfo.cs
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\AngularWebpackVisualStudio\obj\Debug\netcoreapp1.1\AngularWebpackVisualStudio.pdb

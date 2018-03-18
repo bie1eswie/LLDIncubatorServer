@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="36367826ef4846b6a6415034b4b29e9d" Name="Diagram1" ZoomLevel="75" >
+        <EntityTypeShape EntityType="IncubatorRequirements.Boolean" Width="1.5" PointX="10.75" PointY="13.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.CalculationMap" Width="1.5" PointX="5.75" PointY="16.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.Calculation" Width="1.5" PointX="12.75" PointY="13.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.ClientField" Width="1.5" PointX="3.75" PointY="21.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.ClientType" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="IncubatorRequirements.DropdownSetMap" Width="1.5" PointX="11" PointY="6" />
+        <EntityTypeShape EntityType="IncubatorRequirements.DropdownSet" Width="1.5" PointX="8.75" PointY="7" />
+        <EntityTypeShape EntityType="IncubatorRequirements.DropdownValue" Width="1.5" PointX="8.75" PointY="13" />
+        <EntityTypeShape EntityType="IncubatorRequirements.FieldSetGroupMap" Width="1.5" PointX="6" PointY="10.25" />
+        <EntityTypeShape EntityType="IncubatorRequirements.FieldSetGroup" Width="1.5" PointX="0.75" PointY="10.875" />
+        <EntityTypeShape EntityType="IncubatorRequirements.FieldSetMap" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="IncubatorRequirements.FieldSet" Width="1.5" PointX="3.75" PointY="1.875" />
+        <EntityTypeShape EntityType="IncubatorRequirements.FieldType" Width="1.5" PointX="1.5" PointY="22" />
+        <EntityTypeShape EntityType="IncubatorRequirements.IncubatorQuardrant" Width="1.5" PointX="13.75" PointY="5.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.QuardrantMap" Width="1.5" PointX="7.75" PointY="18.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.RejectionReason" Width="1.5" PointX="9.75" PointY="18.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.RequirementMap" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="IncubatorRequirements.Requirement" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="IncubatorRequirements.sysdiagram" Width="1.5" PointX="2.75" PointY="17.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.WorkItemStageMap" Width="1.5" PointX="11.75" PointY="18.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.WorkItemStageReason" Width="1.5" PointX="13.75" PointY="18.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.WorkItemStage" Width="1.5" PointX="14.75" PointY="10.625" />
+        <EntityTypeShape EntityType="IncubatorRequirements.WorkItemStatu" Width="1.5" PointX="15.75" PointY="5.625" />
+        <AssociationConnector Association="IncubatorRequirements.FK_ClientFieldFieldSetMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_ClientFieldFieldType" />
+        <AssociationConnector Association="IncubatorRequirements.FK_ClientTypeRequirementMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_DropdownSetDropdownSetMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_DropdownValueDropdownSetMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_FieldSetFieldSetGroupMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_FieldSetGroupFieldSetGroupMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_FieldSetGroupRequirementMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_FieldSetFieldSetMap" />
+        <AssociationConnector Association="IncubatorRequirements.FK_RequirementRequirementMap" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,14 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\IncubatorRequirements.DALL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\IncubatorRequirements.DALL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\IncubatorRequirements.DALL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\Sefate.Incubator.WorkItem.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\Sefate.Incubator.WorkItem.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\obj\Debug\IncubatorRequirements.DALL.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\obj\Debug\IncubatorRequirements.DALL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\obj\Debug\IncubatorRequirements.DALL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\bin\Debug\Sefate.Incubator.WorkItem.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DALL\obj\Debug\IncubatorRequirements.DALL.csproj.CoreCompileInputs.cache

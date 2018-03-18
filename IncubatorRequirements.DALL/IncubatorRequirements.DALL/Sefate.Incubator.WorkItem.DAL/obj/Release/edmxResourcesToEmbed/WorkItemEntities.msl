@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IncubatorClientsModelStoreContainer" CdmEntityContainer="IncubatorClientsEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.ClientType)">
+        <MappingFragment StoreEntitySet="ClientTypes">
+          <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ClientTypeCode" ColumnName="ClientTypeCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.CompanyUser)">
+        <MappingFragment StoreEntitySet="CompanyUsers">
+          <ScalarProperty Name="CompanyUserID" ColumnName="CompanyUserID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComponentChangeTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.ComponentChangeType)">
+        <MappingFragment StoreEntitySet="ComponentChangeTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ChangeType" ColumnName="ChangeType" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Document)">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="ComponentRef" ColumnName="ComponentRef" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="FieldMapCode" ColumnName="FieldMapCode" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Email)">
+        <MappingFragment StoreEntitySet="Emails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Recipients" ColumnName="Recipients" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.GroupRole)">
+        <MappingFragment StoreEntitySet="GroupRoles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupRole1" ColumnName="GroupRole1" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Group)">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Group1" ColumnName="Group1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Role)">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+          <ScalarProperty Name="RoleText" ColumnName="RoleText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.UserRole)">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="UserLocked" ColumnName="UserLocked" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemFields">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemField)">
+        <MappingFragment StoreEntitySet="WorkItemFields">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="FieldCode" ColumnName="FieldCode" />
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="FieldSetCode" ColumnName="FieldSetCode" />
+          <ScalarProperty Name="MapCode" ColumnName="MapCode" />
+          <ScalarProperty Name="ComponentRef" ColumnName="ComponentRef" />
+          <ScalarProperty Name="WorkItemQuarterID" ColumnName="WorkItemQuarterID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemStatus">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemStatu)">
+        <MappingFragment StoreEntitySet="WorkItemStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SatusCode" ColumnName="SatusCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItems">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItem)">
+        <MappingFragment StoreEntitySet="WorkItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="WorkItemQuardrantID" ColumnName="WorkItemQuardrantID" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentStatuses">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.DocumentStatus)">
+        <MappingFragment StoreEntitySet="DocumentStatuses">
+          <ScalarProperty Name="DocumentStatusID" ColumnName="DocumentStatusID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemStages">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemStage)">
+        <MappingFragment StoreEntitySet="WorkItemStages">
+          <ScalarProperty Name="WorkItemStageID" ColumnName="WorkItemStageID" />
+          <ScalarProperty Name="StageID" ColumnName="StageID" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentReviewStatuses">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.DocumentReviewStatus)">
+        <MappingFragment StoreEntitySet="DocumentReviewStatuses">
+          <ScalarProperty Name="DocumentReviewStatusID" ColumnName="DocumentReviewStatusID" />
+          <ScalarProperty Name="DocumentReview" ColumnName="DocumentReview" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stages">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Stage)">
+        <MappingFragment StoreEntitySet="Stages">
+          <ScalarProperty Name="StageID" ColumnName="StageID" />
+          <ScalarProperty Name="StageText" ColumnName="StageText" />
+          <ScalarProperty Name="StageCode" ColumnName="StageCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemDocumentStatuses">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemDocumentStatus)">
+        <MappingFragment StoreEntitySet="WorkItemDocumentStatuses">
+          <ScalarProperty Name="WorkItemDocumentStatusID" ColumnName="WorkItemDocumentStatusID" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StageID" ColumnName="StageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncubatorQuardrants">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.IncubatorQuardrant)">
+        <MappingFragment StoreEntitySet="IncubatorQuardrants">
+          <ScalarProperty Name="IncubatorQuardrantID" ColumnName="IncubatorQuardrantID" />
+          <ScalarProperty Name="IncubatorQuardrantText" ColumnName="IncubatorQuardrantText" />
+          <ScalarProperty Name="IncubatorQuardrantCode" ColumnName="IncubatorQuardrantCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Milestones">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Milestone)">
+        <MappingFragment StoreEntitySet="Milestones">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QuarterID" ColumnName="QuarterID" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncubatorQuarters">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.IncubatorQuarter)">
+        <MappingFragment StoreEntitySet="IncubatorQuarters">
+          <ScalarProperty Name="IncubatorQuarterID" ColumnName="IncubatorQuarterID" />
+          <ScalarProperty Name="Quarder" ColumnName="Quarder" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="IncubatorQuardrantID" ColumnName="IncubatorQuardrantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncubationStages">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.IncubationStage)">
+        <MappingFragment StoreEntitySet="IncubationStages">
+          <ScalarProperty Name="IncubationStageID" ColumnName="IncubationStageID" />
+          <ScalarProperty Name="IncubationStageText" ColumnName="IncubationStageText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemIncubationComments">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemIncubationComment)">
+        <MappingFragment StoreEntitySet="WorkItemIncubationComments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemIncubationStages">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemIncubationStage)">
+        <MappingFragment StoreEntitySet="WorkItemIncubationStages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="IncubationSageID" ColumnName="IncubationSageID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentPriorities">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.CommentPriority)">
+        <MappingFragment StoreEntitySet="CommentPriorities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventInvitations">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.EventInvitation)">
+        <MappingFragment StoreEntitySet="EventInvitations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncubatorEvents">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.IncubatorEvent)">
+        <MappingFragment StoreEntitySet="IncubatorEvents">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemTimeLines">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.WorkItemTimeLine)">
+        <MappingFragment StoreEntitySet="WorkItemTimeLines">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IncubationStageID" ColumnName="IncubationStageID" />
+          <ScalarProperty Name="WorkItemID" ColumnName="WorkItemID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="WorkItemStageID" ColumnName="WorkItemStageID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventGuests">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.EventGuest)">
+        <MappingFragment StoreEntitySet="EventGuests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VarificationNumbers">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.VarificationNumber)">
+        <MappingFragment StoreEntitySet="VarificationNumbers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

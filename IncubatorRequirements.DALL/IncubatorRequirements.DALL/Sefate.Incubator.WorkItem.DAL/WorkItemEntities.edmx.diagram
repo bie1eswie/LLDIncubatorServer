@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9edfe86f049649a99ec4814569bc3e2e" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="IncubatorClientsModel.Client" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.ClientType" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.CompanyUser" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.ComponentChangeType" Width="2.125" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Document" Width="1.5" PointX="7.5" PointY="1.125" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Email" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.GroupRole" Width="1.5" PointX="3" PointY="12.375" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Group" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Role" Width="1.5" PointX="0.75" PointY="9.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.UserRole" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.User" Width="1.5" PointX="0.75" PointY="12.875" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemField" Width="1.875" PointX="7.5" PointY="5.625" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemStatu" Width="1.5" PointX="4.75" PointY="0.75" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_Clients_ClientTypes" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_GroupRole_Groups" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_GroupRole_Roles" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_UserRole_Roles" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_UserRole_User" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItem" Width="1.5" PointX="5.25" PointY="3.25" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_WorkItem_Clients" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_Documents_WorkItem" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_WorkItemField_WorkItem" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemStage" Width="2" PointX="5.75" PointY="9.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Stage" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.IncubatorQuardrant" Width="2.125" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Milestone" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.IncubatorQuarter" Width="1.875" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.IncubationStage" Width="1.75" PointX="5.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemIncubationComment" Width="2.625" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemIncubationStage" Width="2.375" PointX="11.875" PointY="12.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.CommentPriority" Width="2.75" PointX="5.25" PointY="15" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.EventInvitation" Width="1.5" PointX="14.375" PointY="9.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.IncubatorEvent" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemTimeLine" Width="2" PointX="14.375" PointY="6.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.EventGuest" Width="1.5" PointX="15.375" PointY="3.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.VarificationNumber" Width="1.5" PointX="3" PointY="15.75" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_VarificationNumbers_Users" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.DocumentReviewStatu" Width="1.5" PointX="8.375" PointY="9.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.DocumentStatu" Width="2.375" PointX="10.375" PointY="6.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.WorkItemDocumentStatu" Width="1.5" PointX="11.375" PointY="15.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.CommentRecomendation" Width="2.75" PointX="15.375" PointY="12.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

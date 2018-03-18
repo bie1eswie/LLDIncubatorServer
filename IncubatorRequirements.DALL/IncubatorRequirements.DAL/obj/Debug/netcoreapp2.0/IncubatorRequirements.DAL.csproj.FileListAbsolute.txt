@@ -1,0 +1,11 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\obj\Debug\netcoreapp2.0\IncubatorRequirements.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\obj\Debug\netcoreapp2.0\IncubatorRequirements.DAL.AssemblyInfoInputs.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\obj\Debug\netcoreapp2.0\IncubatorRequirements.DAL.AssemblyInfo.cs
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\bin\Debug\netcoreapp2.0\IncubatorRequirements.DAL.deps.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\bin\Debug\netcoreapp2.0\IncubatorRequirements.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\obj\Debug\netcoreapp2.0\IncubatorRequirements.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\bin\Debug\netcoreapp2.0\IncubatorRequirements.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\obj\Debug\netcoreapp2.0\IncubatorRequirements.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\obj\Debug\netcoreapp2.0\IncubatorRequirements.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\bin\Debug\netcoreapp2.0\IncubatorRequirements.DAL.runtimeconfig.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\IncubatorRequirements.DAL\bin\Debug\netcoreapp2.0\IncubatorRequirements.DAL.runtimeconfig.dev.json

@@ -1,0 +1,9 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\bin\Debug\netcoreapp1.1\Safate.Incubator.API.Core.deps.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\bin\Debug\netcoreapp1.1\Safate.Incubator.API.Core.runtimeconfig.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\bin\Debug\netcoreapp1.1\Safate.Incubator.API.Core.runtimeconfig.dev.json
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\bin\Debug\netcoreapp1.1\Safate.Incubator.API.Core.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\bin\Debug\netcoreapp1.1\Safate.Incubator.API.Core.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\obj\Debug\netcoreapp1.1\Safate.Incubator.API.Core.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\obj\Debug\netcoreapp1.1\Safate.Incubator.API.Core.AssemblyInfo.cs
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\obj\Debug\netcoreapp1.1\Safate.Incubator.API.Core.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.API.Core\obj\Debug\netcoreapp1.1\Safate.Incubator.API.Core.pdb

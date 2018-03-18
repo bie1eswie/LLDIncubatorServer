@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model2Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Model2.Client" />
+    <EntitySet Name="ClientTypes" EntityType="Model2.ClientType" />
+    <EntitySet Name="CommentPriorities" EntityType="Model2.CommentPriority" />
+    <EntitySet Name="CommentRecomendations" EntityType="Model2.CommentRecomendation" />
+    <EntitySet Name="CompanyUsers" EntityType="Model2.CompanyUser" />
+    <EntitySet Name="ComponentChangeTypes" EntityType="Model2.ComponentChangeType" />
+    <EntitySet Name="DocumentReviewStatus" EntityType="Model2.DocumentReviewStatu" />
+    <EntitySet Name="Documents" EntityType="Model2.Document" />
+    <EntitySet Name="DocumentStatus" EntityType="Model2.DocumentStatu" />
+    <EntitySet Name="Emails" EntityType="Model2.Email" />
+    <EntitySet Name="EventGuests" EntityType="Model2.EventGuest" />
+    <EntitySet Name="EventInvitations" EntityType="Model2.EventInvitation" />
+    <EntitySet Name="GroupRoles" EntityType="Model2.GroupRole" />
+    <EntitySet Name="Groups" EntityType="Model2.Group" />
+    <EntitySet Name="IncubationStages" EntityType="Model2.IncubationStage" />
+    <EntitySet Name="IncubatorEvents" EntityType="Model2.IncubatorEvent" />
+    <EntitySet Name="IncubatorQuardrants" EntityType="Model2.IncubatorQuardrant" />
+    <EntitySet Name="IncubatorQuarters" EntityType="Model2.IncubatorQuarter" />
+    <EntitySet Name="InterventionReportFields" EntityType="Model2.InterventionReportField" />
+    <EntitySet Name="InterventionReports" EntityType="Model2.InterventionReport" />
+    <EntitySet Name="InterventionReportTemplates" EntityType="Model2.InterventionReportTemplate" />
+    <EntitySet Name="Milestones" EntityType="Model2.Milestone" />
+    <EntitySet Name="Roles" EntityType="Model2.Role" />
+    <EntitySet Name="Stages" EntityType="Model2.Stage" />
+    <EntitySet Name="UserRoles" EntityType="Model2.UserRole" />
+    <EntitySet Name="Users" EntityType="Model2.User" />
+    <EntitySet Name="VarificationNumbers" EntityType="Model2.VarificationNumber" />
+    <EntitySet Name="WorkItemDocumentStatus" EntityType="Model2.WorkItemDocumentStatu" />
+    <EntitySet Name="WorkItemFields" EntityType="Model2.WorkItemField" />
+    <EntitySet Name="WorkItemIncubationComments" EntityType="Model2.WorkItemIncubationComment" />
+    <EntitySet Name="WorkItemIncubationStages" EntityType="Model2.WorkItemIncubationStage" />
+    <EntitySet Name="WorkItems" EntityType="Model2.WorkItem" />
+    <EntitySet Name="WorkItemStages" EntityType="Model2.WorkItemStage" />
+    <EntitySet Name="WorkItemStatus" EntityType="Model2.WorkItemStatu" />
+    <EntitySet Name="WorkItemTimeLines" EntityType="Model2.WorkItemTimeLine" />
+  </EntityContainer>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="ClientTypeID" Type="Int32" />
+    <Property Name="ClientName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ClientType">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ClientTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CommentPriority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Priority" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CommentRecomendation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CommentID" Type="Int32" />
+    <Property Name="Response" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CompanyUser">
+    <Key>
+      <PropertyRef Name="CompanyUserID" />
+    </Key>
+    <Property Name="CompanyUserID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ComponentChangeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ChangeType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ChangedBy" Type="Int32" />
+    <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DocumentReviewStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentReview" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ComponentRef" />
+      <PropertyRef Name="Extension" />
+      <PropertyRef Name="URL" />
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ContentType" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="ComponentRef" Type="Guid" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="FieldMapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Recipients" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EventGuest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="GuestName" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EventID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EventInvitation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="EventID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GroupRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="GroupRole1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="Role" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Group1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IncubationStage">
+    <Key>
+      <PropertyRef Name="IncubationStageID" />
+    </Key>
+    <Property Name="IncubationStageID" Type="Int32" Nullable="false" />
+    <Property Name="IncubationStageText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IncubatorEvent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="EventType" Type="Int32" />
+    <Property Name="EventDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="IncubatorQuardrant">
+    <Key>
+      <PropertyRef Name="IncubatorQuardrantID" />
+    </Key>
+    <Property Name="IncubatorQuardrantID" Type="Int32" Nullable="false" />
+    <Property Name="IncubatorQuardrantText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IncubatorQuardrantCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ScoreCardValue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="IncubatorQuarter">
+    <Key>
+      <PropertyRef Name="IncubatorQuarterID" />
+    </Key>
+    <Property Name="IncubatorQuarterID" Type="Int32" Nullable="false" />
+    <Property Name="Quarder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="IncubatorQuardrantID" Type="Int32" />
+    <Property Name="ScoreCardValue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="InterventionReportField">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="InterventionReportID" Type="Int32" />
+    <Property Name="SetNumber" Type="Int32" />
+    <Property Name="FieldValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FieldCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WorkItemFieldCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IssueID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="InterventionReport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="InterventionReportTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TemplateContent" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Verssion" Type="Double" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Milestone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QuarterID" Type="Int32" />
+    <Property Name="ShortDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="RoleText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Stage">
+    <Key>
+      <PropertyRef Name="StageID" />
+    </Key>
+    <Property Name="StageID" Type="Int32" Nullable="false" />
+    <Property Name="StageText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StageCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserLocked" Type="Boolean" />
+    <Property Name="Salt" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="Fullname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VarificationNumber">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkItemDocumentStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="StageID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkItemField">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ComponentRef" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="FieldCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldValue" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FieldSetCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ComponentRef" Type="Guid" Nullable="false" />
+    <Property Name="WorkItemQuarterID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRelated" Type="Boolean" />
+    <Property Name="InterventionReportID" Type="Int32" />
+    <Property Name="SetNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkItemIncubationComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CommentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="PriorityID" Type="Int32" />
+    <Property Name="ShortDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkItemIncubationStage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="IncubationSageID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WorkItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemQuardrantID" Type="Int32" />
+    <Property Name="IsChecked" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="WorkItemStage">
+    <Key>
+      <PropertyRef Name="WorkItemStageID" />
+    </Key>
+    <Property Name="WorkItemStageID" Type="Int32" Nullable="false" />
+    <Property Name="StageID" Type="Int32" />
+    <Property Name="WorkItemID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkItemStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="SatusCode" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SatusCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="WorkItemTimeLine">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="WorkItemStageID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="IncubationStageID" Type="Int32" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemStageID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,11 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\Sefate.Incubator.WorkItem.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\Sefate.Incubator.WorkItem.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\Sefate.Incubator.WorkItem.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\obj\Release\Sefate.Incubator.WorkItem.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\obj\Release\Sefate.Incubator.WorkItem.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\obj\Release\Sefate.Incubator.WorkItem.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Sefate.Incubator.WorkItem.DAL\obj\Release\Sefate.Incubator.WorkItem.DAL.csproj.CoreCompileInputs.cache

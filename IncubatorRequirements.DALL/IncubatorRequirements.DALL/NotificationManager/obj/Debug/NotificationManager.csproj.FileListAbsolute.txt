@@ -1,0 +1,13 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\NotificationManager.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\NotificationManager.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Debug\NotificationManager.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Debug\NotificationManager.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Debug\NotificationManager.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\IncubatorRequirements.DALL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\Sefate.Incubator.WorkItem.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\IncubatorRequirements.DALL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\IncubatorRequirements.DALL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\Sefate.Incubator.WorkItem.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\Sefate.Incubator.WorkItem.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Debug\EntityFramework.xml

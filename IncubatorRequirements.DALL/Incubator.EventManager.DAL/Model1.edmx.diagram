@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6032ee6fbb64421a05d6d79795518e3" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.Boolean" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.CalculationMap" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.Calculation" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.ClientField" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model1.ClientType" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.DropdownSetMap" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model1.DropdownSet" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model1.DropdownValue" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.FieldSetGroupMap" Width="1.5" PointX="8.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model1.FieldSetGroup" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.FieldSetMap" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model1.FieldSet" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model1.FieldType" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model1.IncubatorQuardrant" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model1.QuardrantMap" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.RejectionReason" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model1.RequirementMap" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model1.Requirement" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.sysdiagram" Width="1.5" PointX="14.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model1.WorkItemStageMap" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model1.WorkItemStageReason" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Model1.WorkItemStage" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Model1.WorkItemStatu" Width="1.5" PointX="16.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

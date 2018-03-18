@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Clients' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="ClientTypeID" Type="int" />
+    <Property Name="ClientName" Type="varchar" MaxLength="250" />
+    <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.ClientTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ClientTypes">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="int" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="250" />
+    <Property Name="ClientTypeCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.CommentPriorities' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CommentPriorities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Priority" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.CommentRecomendations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CommentRecomendations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CommentID" Type="int" />
+    <Property Name="Response" Type="varchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.CompanyUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CompanyUsers">
+    <Key>
+      <PropertyRef Name="CompanyUserID" />
+    </Key>
+    <Property Name="CompanyUserID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.ComponentChangeTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ComponentChangeTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ChangeType" Type="nchar" MaxLength="10" />
+    <Property Name="ChangedBy" Type="int" />
+    <Property Name="ChangedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.DocumentReviewStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DocumentReviewStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DocumentReview" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Documents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ComponentRef" />
+      <PropertyRef Name="Extension" />
+      <PropertyRef Name="URL" />
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DocumentName" Type="varchar" MaxLength="50" />
+    <Property Name="DocumentType" Type="varchar" MaxLength="50" />
+    <Property Name="Content" Type="varbinary(max)" />
+    <Property Name="ContentType" Type="varchar" MaxLength="250" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="ComponentRef" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="FieldMapCode" Type="varchar" MaxLength="50" />
+    <Property Name="Extension" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="URL" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.DocumentStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DocumentStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="StatusID" Type="int" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DocumentID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Emails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Emails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Recipients" Type="varchar" MaxLength="250" />
+    <Property Name="Body" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.EventGuests' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EventGuests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="GuestName" Type="int" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="EventID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.EventInvitations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EventInvitations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="EventID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.GroupRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GroupRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="GroupRole" Type="varchar" MaxLength="250" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="Role" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Groups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Group" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.IncubationStages' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IncubationStages">
+    <Key>
+      <PropertyRef Name="IncubationStageID" />
+    </Key>
+    <Property Name="IncubationStageID" Type="int" Nullable="false" />
+    <Property Name="IncubationStageText" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.IncubatorEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IncubatorEvents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="EventType" Type="int" />
+    <Property Name="EventDescription" Type="varchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.IncubatorQuardrants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IncubatorQuardrants">
+    <Key>
+      <PropertyRef Name="IncubatorQuardrantID" />
+    </Key>
+    <Property Name="IncubatorQuardrantID" Type="int" Nullable="false" />
+    <Property Name="IncubatorQuardrantText" Type="varchar" MaxLength="50" />
+    <Property Name="IncubatorQuardrantCode" Type="varchar" MaxLength="50" />
+    <Property Name="ScoreCardValue" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.IncubatorQuarters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IncubatorQuarters">
+    <Key>
+      <PropertyRef Name="IncubatorQuarterID" />
+    </Key>
+    <Property Name="IncubatorQuarterID" Type="int" Nullable="false" />
+    <Property Name="Quarder" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="IncubatorQuardrantID" Type="int" />
+    <Property Name="ScoreCardValue" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.InterventionReportFields' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InterventionReportFields">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="InterventionReportID" Type="int" />
+    <Property Name="SetNumber" Type="int" />
+    <Property Name="FieldValue" Type="varchar(max)" />
+    <Property Name="FieldCode" Type="varchar" MaxLength="50" />
+    <Property Name="MapCode" Type="varchar" MaxLength="50" />
+    <Property Name="WorkItemFieldCode" Type="varchar" MaxLength="50" />
+    <Property Name="IssueID" Type="uniqueidentifier" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.InterventionReports' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InterventionReports">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.InterventionReportTemplates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InterventionReportTemplates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TemplateContent" Type="varbinary(max)" />
+    <Property Name="Verssion" Type="float" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Milestones' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Milestones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="QuarterID" Type="int" />
+    <Property Name="ShortDescription" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="RoleText" Type="varchar" MaxLength="50" />
+    <Property Name="RoleType" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Stages' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Stages">
+    <Key>
+      <PropertyRef Name="StageID" />
+    </Key>
+    <Property Name="StageID" Type="int" Nullable="false" />
+    <Property Name="StageText" Type="varchar" MaxLength="50" />
+    <Property Name="StageCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.UserRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="RoleID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="250" />
+    <Property Name="UserLocked" Type="bit" />
+    <Property Name="Salt" Type="varchar" MaxLength="250" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="Fullname" Type="varchar" MaxLength="250" />
+    <Property Name="Surname" Type="varchar" MaxLength="250" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="GroupID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.VarificationNumbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VarificationNumbers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Number" Type="varchar" MaxLength="50" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemDocumentStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemDocumentStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="StageID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemFields' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemFields">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ComponentRef" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="FieldCode" Type="varchar" MaxLength="50" />
+    <Property Name="FieldValue" Type="varchar" MaxLength="250" />
+    <Property Name="FieldSetCode" Type="varchar" MaxLength="50" />
+    <Property Name="MapCode" Type="varchar" MaxLength="50" />
+    <Property Name="ComponentRef" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="WorkItemQuarterID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsRelated" Type="bit" />
+    <Property Name="InterventionReportID" Type="int" />
+    <Property Name="SetNumber" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemIncubationComments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemIncubationComments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CommentText" Type="varchar(max)" />
+    <Property Name="CreatedDateTime" Type="datetime" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="PriorityID" Type="int" />
+    <Property Name="ShortDescription" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemIncubationStages' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemIncubationStages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="IncubationSageID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="WorkItemQuardrantID" Type="int" />
+    <Property Name="IsChecked" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemStages' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemStages">
+    <Key>
+      <PropertyRef Name="WorkItemStageID" />
+    </Key>
+    <Property Name="WorkItemStageID" Type="int" Nullable="false" />
+    <Property Name="StageID" Type="int" />
+    <Property Name="WorkItemID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="SatusCode" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="SatusCode" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IncubatorClients.dbo.WorkItemTimeLines' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkItemTimeLines">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="WorkItemStageID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IncubationStageID" Type="int" />
+    <Property Name="WorkItemID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="WorkItemStageID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityContainer Name="Model2StoreContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Clients].[ClientID] AS [ClientID], 
+    [Clients].[ClientTypeID] AS [ClientTypeID], 
+    [Clients].[ClientName] AS [ClientName], 
+    [Clients].[RegistrationNumber] AS [RegistrationNumber], 
+    [Clients].[CreatedDate] AS [CreatedDate]
+    FROM [dbo].[Clients] AS [Clients]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ClientTypes" EntityType="Self.ClientTypes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ClientTypes].[ClientTypeID] AS [ClientTypeID], 
+    [ClientTypes].[Type] AS [Type], 
+    [ClientTypes].[ClientTypeCode] AS [ClientTypeCode]
+    FROM [dbo].[ClientTypes] AS [ClientTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CommentPriorities" EntityType="Self.CommentPriorities" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CommentPriorities].[ID] AS [ID], 
+    [CommentPriorities].[Priority] AS [Priority]
+    FROM [dbo].[CommentPriorities] AS [CommentPriorities]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CommentRecomendations" EntityType="Self.CommentRecomendations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CommentRecomendations].[ID] AS [ID], 
+    [CommentRecomendations].[CommentID] AS [CommentID], 
+    [CommentRecomendations].[Response] AS [Response], 
+    [CommentRecomendations].[CreatedDate] AS [CreatedDate], 
+    [CommentRecomendations].[ModifiedDate] AS [ModifiedDate], 
+    [CommentRecomendations].[CreatedBy] AS [CreatedBy]
+    FROM [dbo].[CommentRecomendations] AS [CommentRecomendations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CompanyUsers" EntityType="Self.CompanyUsers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CompanyUsers].[CompanyUserID] AS [CompanyUserID], 
+    [CompanyUsers].[ClientID] AS [ClientID], 
+    [CompanyUsers].[UserID] AS [UserID]
+    FROM [dbo].[CompanyUsers] AS [CompanyUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ComponentChangeTypes" EntityType="Self.ComponentChangeTypes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ComponentChangeTypes].[ID] AS [ID], 
+    [ComponentChangeTypes].[ChangeType] AS [ChangeType], 
+    [ComponentChangeTypes].[ChangedBy] AS [ChangedBy], 
+    [ComponentChangeTypes].[ChangedDate] AS [ChangedDate]
+    FROM [dbo].[ComponentChangeTypes] AS [ComponentChangeTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DocumentReviewStatus" EntityType="Self.DocumentReviewStatus" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DocumentReviewStatus].[ID] AS [ID], 
+    [DocumentReviewStatus].[DocumentReview] AS [DocumentReview]
+    FROM [dbo].[DocumentReviewStatus] AS [DocumentReviewStatus]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Documents" EntityType="Self.Documents" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Documents].[ID] AS [ID], 
+    [Documents].[DocumentName] AS [DocumentName], 
+    [Documents].[DocumentType] AS [DocumentType], 
+    [Documents].[Content] AS [Content], 
+    [Documents].[ContentType] AS [ContentType], 
+    [Documents].[WorkItemID] AS [WorkItemID], 
+    [Documents].[ComponentRef] AS [ComponentRef], 
+    [Documents].[CreatedDate] AS [CreatedDate], 
+    [Documents].[ModifiedDate] AS [ModifiedDate], 
+    [Documents].[FieldMapCode] AS [FieldMapCode], 
+    [Documents].[Extension] AS [Extension], 
+    [Documents].[URL] AS [URL], 
+    [Documents].[StatusID] AS [StatusID]
+    FROM [dbo].[Documents] AS [Documents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DocumentStatus" EntityType="Self.DocumentStatus" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DocumentStatus].[StatusID] AS [StatusID], 
+    [DocumentStatus].[ID] AS [ID], 
+    [DocumentStatus].[DocumentID] AS [DocumentID]
+    FROM [dbo].[DocumentStatus] AS [DocumentStatus]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Emails" EntityType="Self.Emails" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Emails].[ID] AS [ID], 
+    [Emails].[Recipients] AS [Recipients], 
+    [Emails].[Body] AS [Body]
+    FROM [dbo].[Emails] AS [Emails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EventGuests" EntityType="Self.EventGuests" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EventGuests].[ID] AS [ID], 
+    [EventGuests].[GuestName] AS [GuestName], 
+    [EventGuests].[Description] AS [Description], 
+    [EventGuests].[EventID] AS [EventID]
+    FROM [dbo].[EventGuests] AS [EventGuests]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EventInvitations" EntityType="Self.EventInvitations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EventInvitations].[ID] AS [ID], 
+    [EventInvitations].[ClientID] AS [ClientID], 
+    [EventInvitations].[EventID] AS [EventID]
+    FROM [dbo].[EventInvitations] AS [EventInvitations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GroupRoles" EntityType="Self.GroupRoles" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GroupRoles].[ID] AS [ID], 
+    [GroupRoles].[GroupRole] AS [GroupRole], 
+    [GroupRoles].[GroupID] AS [GroupID], 
+    [GroupRoles].[Role] AS [Role]
+    FROM [dbo].[GroupRoles] AS [GroupRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Groups" EntityType="Self.Groups" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Groups].[ID] AS [ID], 
+    [Groups].[Group] AS [Group]
+    FROM [dbo].[Groups] AS [Groups]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IncubationStages" EntityType="Self.IncubationStages" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IncubationStages].[IncubationStageID] AS [IncubationStageID], 
+    [IncubationStages].[IncubationStageText] AS [IncubationStageText]
+    FROM [dbo].[IncubationStages] AS [IncubationStages]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IncubatorEvents" EntityType="Self.IncubatorEvents" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IncubatorEvents].[ID] AS [ID], 
+    [IncubatorEvents].[EventType] AS [EventType], 
+    [IncubatorEvents].[EventDescription] AS [EventDescription], 
+    [IncubatorEvents].[CreatedDate] AS [CreatedDate], 
+    [IncubatorEvents].[StartDate] AS [StartDate], 
+    [IncubatorEvents].[EndDate] AS [EndDate]
+    FROM [dbo].[IncubatorEvents] AS [IncubatorEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IncubatorQuardrants" EntityType="Self.IncubatorQuardrants" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IncubatorQuardrants].[IncubatorQuardrantID] AS [IncubatorQuardrantID], 
+    [IncubatorQuardrants].[IncubatorQuardrantText] AS [IncubatorQuardrantText], 
+    [IncubatorQuardrants].[IncubatorQuardrantCode] AS [IncubatorQuardrantCode], 
+    [IncubatorQuardrants].[ScoreCardValue] AS [ScoreCardValue]
+    FROM [dbo].[IncubatorQuardrants] AS [IncubatorQuardrants]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IncubatorQuarters" EntityType="Self.IncubatorQuarters" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IncubatorQuarters].[IncubatorQuarterID] AS [IncubatorQuarterID], 
+    [IncubatorQuarters].[Quarder] AS [Quarder], 
+    [IncubatorQuarters].[CreatedDate] AS [CreatedDate], 
+    [IncubatorQuarters].[ModifiedDate] AS [ModifiedDate], 
+    [IncubatorQuarters].[WorkItemID] AS [WorkItemID], 
+    [IncubatorQuarters].[IncubatorQuardrantID] AS [IncubatorQuardrantID], 
+    [IncubatorQuarters].[ScoreCardValue] AS [ScoreCardValue]
+    FROM [dbo].[IncubatorQuarters] AS [IncubatorQuarters]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InterventionReportFields" EntityType="Self.InterventionReportFields" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InterventionReportFields].[ID] AS [ID], 
+    [InterventionReportFields].[InterventionReportID] AS [InterventionReportID], 
+    [InterventionReportFields].[SetNumber] AS [SetNumber], 
+    [InterventionReportFields].[FieldValue] AS [FieldValue], 
+    [InterventionReportFields].[FieldCode] AS [FieldCode], 
+    [InterventionReportFields].[MapCode] AS [MapCode], 
+    [InterventionReportFields].[WorkItemFieldCode] AS [WorkItemFieldCode], 
+    [InterventionReportFields].[IssueID] AS [IssueID]
+    FROM [dbo].[InterventionReportFields] AS [InterventionReportFields]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InterventionReports" EntityType="Self.InterventionReports" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InterventionReports].[ID] AS [ID], 
+    [InterventionReports].[Name] AS [Name], 
+    [InterventionReports].[ClientID] AS [ClientID]
+    FROM [dbo].[InterventionReports] AS [InterventionReports]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InterventionReportTemplates" EntityType="Self.InterventionReportTemplates" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InterventionReportTemplates].[ID] AS [ID], 
+    [InterventionReportTemplates].[TemplateContent] AS [TemplateContent], 
+    [InterventionReportTemplates].[Verssion] AS [Verssion], 
+    [InterventionReportTemplates].[Name] AS [Name]
+    FROM [dbo].[InterventionReportTemplates] AS [InterventionReportTemplates]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Milestones" EntityType="Self.Milestones" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Milestones].[ID] AS [ID], 
+    [Milestones].[CreatedDate] AS [CreatedDate], 
+    [Milestones].[EndDate] AS [EndDate], 
+    [Milestones].[Description] AS [Description], 
+    [Milestones].[QuarterID] AS [QuarterID], 
+    [Milestones].[ShortDescription] AS [ShortDescription]
+    FROM [dbo].[Milestones] AS [Milestones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Roles" EntityType="Self.Roles" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Roles].[ID] AS [ID], 
+    [Roles].[RoleText] AS [RoleText], 
+    [Roles].[RoleType] AS [RoleType]
+    FROM [dbo].[Roles] AS [Roles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Stages" EntityType="Self.Stages" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Stages].[StageID] AS [StageID], 
+    [Stages].[StageText] AS [StageText], 
+    [Stages].[StageCode] AS [StageCode]
+    FROM [dbo].[Stages] AS [Stages]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserRoles].[ID] AS [ID], 
+    [UserRoles].[UserID] AS [UserID], 
+    [UserRoles].[RoleID] AS [RoleID]
+    FROM [dbo].[UserRoles] AS [UserRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Users].[ID] AS [ID], 
+    [Users].[Username] AS [Username], 
+    [Users].[Password] AS [Password], 
+    [Users].[EmailAddress] AS [EmailAddress], 
+    [Users].[UserLocked] AS [UserLocked], 
+    [Users].[Salt] AS [Salt], 
+    [Users].[DateCreated] AS [DateCreated], 
+    [Users].[Fullname] AS [Fullname], 
+    [Users].[Surname] AS [Surname], 
+    [Users].[Phone] AS [Phone], 
+    [Users].[GroupID] AS [GroupID]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VarificationNumbers" EntityType="Self.VarificationNumbers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VarificationNumbers].[ID] AS [ID], 
+    [VarificationNumbers].[Number] AS [Number], 
+    [VarificationNumbers].[UserID] AS [UserID]
+    FROM [dbo].[VarificationNumbers] AS [VarificationNumbers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemDocumentStatus" EntityType="Self.WorkItemDocumentStatus" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemDocumentStatus].[ID] AS [ID], 
+    [WorkItemDocumentStatus].[WorkItemID] AS [WorkItemID], 
+    [WorkItemDocumentStatus].[StatusID] AS [StatusID], 
+    [WorkItemDocumentStatus].[StageID] AS [StageID]
+    FROM [dbo].[WorkItemDocumentStatus] AS [WorkItemDocumentStatus]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemFields" EntityType="Self.WorkItemFields" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemFields].[ID] AS [ID], 
+    [WorkItemFields].[WorkItemID] AS [WorkItemID], 
+    [WorkItemFields].[FieldCode] AS [FieldCode], 
+    [WorkItemFields].[FieldValue] AS [FieldValue], 
+    [WorkItemFields].[FieldSetCode] AS [FieldSetCode], 
+    [WorkItemFields].[MapCode] AS [MapCode], 
+    [WorkItemFields].[ComponentRef] AS [ComponentRef], 
+    [WorkItemFields].[WorkItemQuarterID] AS [WorkItemQuarterID], 
+    [WorkItemFields].[CreatedDate] AS [CreatedDate], 
+    [WorkItemFields].[ModifiedDate] AS [ModifiedDate], 
+    [WorkItemFields].[IsRelated] AS [IsRelated], 
+    [WorkItemFields].[InterventionReportID] AS [InterventionReportID], 
+    [WorkItemFields].[SetNumber] AS [SetNumber]
+    FROM [dbo].[WorkItemFields] AS [WorkItemFields]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemIncubationComments" EntityType="Self.WorkItemIncubationComments" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemIncubationComments].[ID] AS [ID], 
+    [WorkItemIncubationComments].[CommentText] AS [CommentText], 
+    [WorkItemIncubationComments].[CreatedDateTime] AS [CreatedDateTime], 
+    [WorkItemIncubationComments].[WorkItemID] AS [WorkItemID], 
+    [WorkItemIncubationComments].[PriorityID] AS [PriorityID], 
+    [WorkItemIncubationComments].[ShortDescription] AS [ShortDescription], 
+    [WorkItemIncubationComments].[CreatedBy] AS [CreatedBy]
+    FROM [dbo].[WorkItemIncubationComments] AS [WorkItemIncubationComments]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemIncubationStages" EntityType="Self.WorkItemIncubationStages" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemIncubationStages].[ID] AS [ID], 
+    [WorkItemIncubationStages].[WorkItemID] AS [WorkItemID], 
+    [WorkItemIncubationStages].[IncubationSageID] AS [IncubationSageID], 
+    [WorkItemIncubationStages].[CreatedDate] AS [CreatedDate], 
+    [WorkItemIncubationStages].[ModifiedDate] AS [ModifiedDate]
+    FROM [dbo].[WorkItemIncubationStages] AS [WorkItemIncubationStages]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItems" EntityType="Self.WorkItems" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItems].[ID] AS [ID], 
+    [WorkItems].[ClientID] AS [ClientID], 
+    [WorkItems].[StatusID] AS [StatusID], 
+    [WorkItems].[CreatedBy] AS [CreatedBy], 
+    [WorkItems].[CreatedDate] AS [CreatedDate], 
+    [WorkItems].[ModifiedBy] AS [ModifiedBy], 
+    [WorkItems].[ModifiedDate] AS [ModifiedDate], 
+    [WorkItems].[WorkItemQuardrantID] AS [WorkItemQuardrantID], 
+    [WorkItems].[IsChecked] AS [IsChecked]
+    FROM [dbo].[WorkItems] AS [WorkItems]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemStages" EntityType="Self.WorkItemStages" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemStages].[WorkItemStageID] AS [WorkItemStageID], 
+    [WorkItemStages].[StageID] AS [StageID], 
+    [WorkItemStages].[WorkItemID] AS [WorkItemID]
+    FROM [dbo].[WorkItemStages] AS [WorkItemStages]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemStatus" EntityType="Self.WorkItemStatus" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemStatus].[ID] AS [ID], 
+    [WorkItemStatus].[Status] AS [Status], 
+    [WorkItemStatus].[SatusCode] AS [SatusCode]
+    FROM [dbo].[WorkItemStatus] AS [WorkItemStatus]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkItemTimeLines" EntityType="Self.WorkItemTimeLines" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkItemTimeLines].[ID] AS [ID], 
+    [WorkItemTimeLines].[IncubationStageID] AS [IncubationStageID], 
+    [WorkItemTimeLines].[WorkItemID] AS [WorkItemID], 
+    [WorkItemTimeLines].[CreatedDate] AS [CreatedDate], 
+    [WorkItemTimeLines].[WorkItemStageID] AS [WorkItemStageID], 
+    [WorkItemTimeLines].[CreatedBy] AS [CreatedBy]
+    FROM [dbo].[WorkItemTimeLines] AS [WorkItemTimeLines]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

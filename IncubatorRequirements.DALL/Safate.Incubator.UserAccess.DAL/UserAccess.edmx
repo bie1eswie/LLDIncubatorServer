@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IncubatorClientsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientTypeID" Type="int" />
+          <Property Name="ClientName" Type="varchar" MaxLength="250" />
+          <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ClientTypes">
+          <Key>
+            <PropertyRef Name="ClientTypeID" />
+          </Key>
+          <Property Name="ClientTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="250" />
+          <Property Name="ClientTypeCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CompanyUsers">
+          <Key>
+            <PropertyRef Name="CompanyUserID" />
+          </Key>
+          <Property Name="CompanyUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientID" Type="int" />
+          <Property Name="UserID" Type="int" />
+        </EntityType>
+        <EntityType Name="GroupRoles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupRole" Type="varchar" MaxLength="250" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="Role" Type="int" />
+        </EntityType>
+        <EntityType Name="Groups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Group" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleText" Type="varchar" MaxLength="50" />
+          <Property Name="RoleType" Type="int" />
+        </EntityType>
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="RoleID" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="250" />
+          <Property Name="Password" Type="varchar" MaxLength="250" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="250" />
+          <Property Name="UserLocked" Type="bit" />
+          <Property Name="Salt" Type="varchar" MaxLength="250" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="Fullname" Type="varchar" MaxLength="250" />
+          <Property Name="Surname" Type="varchar" MaxLength="250" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="GroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="VarificationNumbers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Number" Type="varchar" MaxLength="50" />
+          <Property Name="UserID" Type="int" />
+        </EntityType>
+        <Association Name="FK_Clients_ClientTypes">
+          <End Role="ClientTypes" Type="Self.ClientTypes" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientTypes">
+              <PropertyRef Name="ClientTypeID" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="ClientTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupRole_Groups">
+          <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+          <End Role="GroupRoles" Type="Self.GroupRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Groups">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRoles">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupRole_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="GroupRoles" Type="Self.GroupRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRoles">
+              <PropertyRef Name="Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_User">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VarificationNumbers_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="VarificationNumbers" Type="Self.VarificationNumbers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VarificationNumbers">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IncubatorClientsModelStoreContainer">
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientTypes" EntityType="Self.ClientTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyUsers" EntityType="Self.CompanyUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupRoles" EntityType="Self.GroupRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VarificationNumbers" EntityType="Self.VarificationNumbers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Clients_ClientTypes" Association="Self.FK_Clients_ClientTypes">
+            <End Role="ClientTypes" EntitySet="ClientTypes" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupRole_Groups" Association="Self.FK_GroupRole_Groups">
+            <End Role="Groups" EntitySet="Groups" />
+            <End Role="GroupRoles" EntitySet="GroupRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupRole_Roles" Association="Self.FK_GroupRole_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="GroupRoles" EntitySet="GroupRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_Roles" Association="Self.FK_UserRole_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VarificationNumbers_Users" Association="Self.FK_VarificationNumbers_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="VarificationNumbers" EntitySet="VarificationNumbers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IncubatorClientsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="IncubatorClientsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Groups" EntityType="IncubatorClientsModel.Group" />
+          <EntitySet Name="GroupRoles" EntityType="IncubatorClientsModel.GroupRole" />
+          <EntitySet Name="Roles" EntityType="IncubatorClientsModel.Role" />
+          <EntitySet Name="UserRoles" EntityType="IncubatorClientsModel.UserRole" />
+          <EntitySet Name="Users" EntityType="IncubatorClientsModel.User" />
+          <AssociationSet Name="FK_GroupRole_Groups" Association="IncubatorClientsModel.FK_GroupRole_Groups">
+            <End EntitySet="Groups" Role="Group" />
+            <End EntitySet="GroupRoles" Role="GroupRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupRole_Roles" Association="IncubatorClientsModel.FK_GroupRole_Roles">
+            <End EntitySet="Roles" Role="Role" />
+            <End EntitySet="GroupRoles" Role="GroupRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_Roles" Association="IncubatorClientsModel.FK_UserRole_Roles">
+            <End EntitySet="Roles" Role="Role" />
+            <End EntitySet="UserRoles" Role="UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_User" Association="IncubatorClientsModel.FK_UserRole_User">
+            <End EntitySet="Users" Role="User" />
+            <End EntitySet="UserRoles" Role="UserRole" />
+          </AssociationSet>
+          <EntitySet Name="Clients" EntityType="IncubatorClientsModel.Client" />
+          <EntitySet Name="ClientTypes" EntityType="IncubatorClientsModel.ClientType" />
+          <AssociationSet Name="FK_Clients_ClientTypes" Association="IncubatorClientsModel.FK_Clients_ClientTypes">
+            <End EntitySet="ClientTypes" Role="ClientType" />
+            <End EntitySet="Clients" Role="Client" />
+          </AssociationSet>
+          <EntitySet Name="CompanyUsers" EntityType="IncubatorClientsModel.CompanyUser" />
+          <EntitySet Name="VarificationNumbers" EntityType="IncubatorClientsModel.VarificationNumber" />
+          <AssociationSet Name="FK_VarificationNumbers_Users" Association="IncubatorClientsModel.FK_VarificationNumbers_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="VarificationNumber" EntitySet="VarificationNumbers" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Group1" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <NavigationProperty Name="GroupRoles" Relationship="IncubatorClientsModel.FK_GroupRole_Groups" FromRole="Group" ToRole="GroupRole" />
+        </EntityType>
+        <EntityType Name="GroupRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="GroupRole1" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="Role" Type="Int32" />
+          <NavigationProperty Name="Group" Relationship="IncubatorClientsModel.FK_GroupRole_Groups" FromRole="GroupRole" ToRole="Group" />
+          <NavigationProperty Name="Role1" Relationship="IncubatorClientsModel.FK_GroupRole_Roles" FromRole="GroupRole" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="RoleType" Type="Int32" />
+          <NavigationProperty Name="GroupRoles" Relationship="IncubatorClientsModel.FK_GroupRole_Roles" FromRole="Role" ToRole="GroupRole" />
+          <NavigationProperty Name="UserRoles" Relationship="IncubatorClientsModel.FK_UserRole_Roles" FromRole="Role" ToRole="UserRole" />
+          <Property Name="RoleText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="RoleID" Type="Int32" />
+          <NavigationProperty Name="Role" Relationship="IncubatorClientsModel.FK_UserRole_Roles" FromRole="UserRole" ToRole="Role" />
+          <NavigationProperty Name="User" Relationship="IncubatorClientsModel.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Username" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Password" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="EmailAddress" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="UserLocked" Type="Boolean" />
+          <Property Name="Salt" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="DateCreated" Precision="3" Type="DateTime" />
+          <NavigationProperty Name="UserRoles" Relationship="IncubatorClientsModel.FK_UserRole_User" FromRole="User" ToRole="UserRole" />
+          <Property Name="Fullname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GroupID" Type="Int32" />
+          <NavigationProperty Name="VarificationNumbers" Relationship="IncubatorClientsModel.FK_VarificationNumbers_Users" FromRole="User" ToRole="VarificationNumber" />
+        </EntityType>
+        <Association Name="FK_GroupRole_Groups">
+          <End Type="IncubatorClientsModel.Group" Multiplicity="0..1" Role="Group" />
+          <End Type="IncubatorClientsModel.GroupRole" Multiplicity="*" Role="GroupRole" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRole">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupRole_Roles">
+          <End Type="IncubatorClientsModel.Role" Multiplicity="0..1" Role="Role" />
+          <End Type="IncubatorClientsModel.GroupRole" Multiplicity="*" Role="GroupRole" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GroupRole">
+              <PropertyRef Name="Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_Roles">
+          <End Type="IncubatorClientsModel.Role" Multiplicity="0..1" Role="Role" />
+          <End Type="IncubatorClientsModel.UserRole" Multiplicity="*" Role="UserRole" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_User">
+          <End Type="IncubatorClientsModel.User" Multiplicity="0..1" Role="User" />
+          <End Type="IncubatorClientsModel.UserRole" Multiplicity="*" Role="UserRole" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="ClientTypeID" Type="Int32" />
+          <Property Name="ClientName" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="RegistrationNumber" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="CreatedDate" Precision="3" Type="DateTime" />
+          <NavigationProperty Name="ClientType" Relationship="IncubatorClientsModel.FK_Clients_ClientTypes" FromRole="Client" ToRole="ClientType" />
+        </EntityType>
+        <EntityType Name="ClientType">
+          <Key>
+            <PropertyRef Name="ClientTypeID" />
+          </Key>
+          <Property Name="ClientTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="ClientTypeCode" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <NavigationProperty Name="Clients" Relationship="IncubatorClientsModel.FK_Clients_ClientTypes" FromRole="ClientType" ToRole="Client" />
+          <Property Name="Type" MaxLength="250" FixedLength="false" Unicode="false" Type="String" />
+        </EntityType>
+        <Association Name="FK_Clients_ClientTypes">
+          <End Type="IncubatorClientsModel.ClientType" Multiplicity="0..1" Role="ClientType" />
+          <End Type="IncubatorClientsModel.Client" Multiplicity="*" Role="Client" />
+          <ReferentialConstraint>
+            <Principal Role="ClientType">
+              <PropertyRef Name="ClientTypeID" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="ClientTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CompanyUser">
+          <Key>
+            <PropertyRef Name="CompanyUserID" />
+          </Key>
+          <Property Name="CompanyUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="Int32" />
+          <Property Name="UserID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VarificationNumber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="IncubatorClientsModel.FK_VarificationNumbers_Users" FromRole="VarificationNumber" ToRole="User" />
+          <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_VarificationNumbers_Users">
+          <End Type="IncubatorClientsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="IncubatorClientsModel.VarificationNumber" Role="VarificationNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VarificationNumber">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IncubatorClientsModelStoreContainer" CdmEntityContainer="IncubatorClientsEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="IncubatorClientsModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="UserLocked" ColumnName="UserLocked" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="IncubatorClientsModel.Client">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientTypes">
+            <EntityTypeMapping TypeName="IncubatorClientsModel.ClientType">
+              <MappingFragment StoreEntitySet="ClientTypes">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ClientTypeCode" ColumnName="ClientTypeCode" />
+                <ScalarProperty Name="ClientTypeID" ColumnName="ClientTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Role)">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="RoleText" ColumnName="RoleText" />
+                <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.UserRole)">
+              <MappingFragment StoreEntitySet="UserRoles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.Group)">
+              <MappingFragment StoreEntitySet="Groups">
+                <ScalarProperty Name="Group1" ColumnName="Group" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupRoles">
+            <EntityTypeMapping TypeName="IsTypeOf(IncubatorClientsModel.GroupRole)">
+              <MappingFragment StoreEntitySet="GroupRoles">
+                <ScalarProperty Name="GroupRole1" ColumnName="GroupRole" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyUsers">
+            <EntityTypeMapping TypeName="IncubatorClientsModel.CompanyUser">
+              <MappingFragment StoreEntitySet="CompanyUsers">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="CompanyUserID" ColumnName="CompanyUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VarificationNumbers">
+            <EntityTypeMapping TypeName="IncubatorClientsModel.VarificationNumber">
+              <MappingFragment StoreEntitySet="VarificationNumbers">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

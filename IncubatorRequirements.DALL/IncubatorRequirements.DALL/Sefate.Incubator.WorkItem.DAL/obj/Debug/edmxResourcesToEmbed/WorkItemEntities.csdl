@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IncubatorClientsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IncubatorClientsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="IncubatorClientsModel.Client" />
+    <EntitySet Name="ClientTypes" EntityType="IncubatorClientsModel.ClientType" />
+    <EntitySet Name="CompanyUsers" EntityType="IncubatorClientsModel.CompanyUser" />
+    <EntitySet Name="ComponentChangeTypes" EntityType="IncubatorClientsModel.ComponentChangeType" />
+    <EntitySet Name="Documents" EntityType="IncubatorClientsModel.Document" />
+    <EntitySet Name="Emails" EntityType="IncubatorClientsModel.Email" />
+    <EntitySet Name="GroupRoles" EntityType="IncubatorClientsModel.GroupRole" />
+    <EntitySet Name="Groups" EntityType="IncubatorClientsModel.Group" />
+    <EntitySet Name="Roles" EntityType="IncubatorClientsModel.Role" />
+    <EntitySet Name="UserRoles" EntityType="IncubatorClientsModel.UserRole" />
+    <EntitySet Name="Users" EntityType="IncubatorClientsModel.User" />
+    <EntitySet Name="WorkItemFields" EntityType="IncubatorClientsModel.WorkItemField" />
+    <EntitySet Name="WorkItemStatus" EntityType="IncubatorClientsModel.WorkItemStatu" />
+    <AssociationSet Name="FK_Clients_ClientTypes" Association="IncubatorClientsModel.FK_Clients_ClientTypes">
+      <End Role="ClientType" EntitySet="ClientTypes" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupRole_Groups" Association="IncubatorClientsModel.FK_GroupRole_Groups">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="GroupRole" EntitySet="GroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupRole_Roles" Association="IncubatorClientsModel.FK_GroupRole_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="GroupRole" EntitySet="GroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_Roles" Association="IncubatorClientsModel.FK_UserRole_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="UserRole" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_User" Association="IncubatorClientsModel.FK_UserRole_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserRole" EntitySet="UserRoles" />
+    </AssociationSet>
+    <EntitySet Name="WorkItems" EntityType="IncubatorClientsModel.WorkItem" />
+    <AssociationSet Name="FK_WorkItem_Clients" Association="IncubatorClientsModel.FK_WorkItem_Clients">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="WorkItem" EntitySet="WorkItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_WorkItem" Association="IncubatorClientsModel.FK_Documents_WorkItem">
+      <End Role="WorkItem" EntitySet="WorkItems" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkItemField_WorkItem" Association="IncubatorClientsModel.FK_WorkItemField_WorkItem">
+      <End Role="WorkItem" EntitySet="WorkItems" />
+      <End Role="WorkItemField" EntitySet="WorkItemFields" />
+    </AssociationSet>
+    <EntitySet Name="WorkItemStages" EntityType="IncubatorClientsModel.WorkItemStage" />
+    <EntitySet Name="Stages" EntityType="IncubatorClientsModel.Stage" />
+    <EntitySet Name="IncubatorQuardrants" EntityType="IncubatorClientsModel.IncubatorQuardrant" />
+    <EntitySet Name="Milestones" EntityType="IncubatorClientsModel.Milestone" />
+    <EntitySet Name="IncubatorQuarters" EntityType="IncubatorClientsModel.IncubatorQuarter" />
+    <EntitySet Name="IncubationStages" EntityType="IncubatorClientsModel.IncubationStage" />
+    <EntitySet Name="WorkItemIncubationComments" EntityType="IncubatorClientsModel.WorkItemIncubationComment" />
+    <EntitySet Name="WorkItemIncubationStages" EntityType="IncubatorClientsModel.WorkItemIncubationStage" />
+    <EntitySet Name="CommentPriorities" EntityType="IncubatorClientsModel.CommentPriority" />
+    <EntitySet Name="EventInvitations" EntityType="IncubatorClientsModel.EventInvitation" />
+    <EntitySet Name="IncubatorEvents" EntityType="IncubatorClientsModel.IncubatorEvent" />
+    <EntitySet Name="WorkItemTimeLines" EntityType="IncubatorClientsModel.WorkItemTimeLine" />
+    <EntitySet Name="EventGuests" EntityType="IncubatorClientsModel.EventGuest" />
+    <EntitySet Name="VarificationNumbers" EntityType="IncubatorClientsModel.VarificationNumber" />
+    <AssociationSet Name="FK_VarificationNumbers_Users" Association="IncubatorClientsModel.FK_VarificationNumbers_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="VarificationNumber" EntitySet="VarificationNumbers" />
+    </AssociationSet>
+    <EntitySet Name="DocumentReviewStatus" EntityType="IncubatorClientsModel.DocumentReviewStatu" />
+    <EntitySet Name="DocumentStatus" EntityType="IncubatorClientsModel.DocumentStatu" />
+    <EntitySet Name="WorkItemDocumentStatus" EntityType="IncubatorClientsModel.WorkItemDocumentStatu" />
+    <EntitySet Name="CommentRecomendations" EntityType="IncubatorClientsModel.CommentRecomendation" />
+  </EntityContainer>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientTypeID" Type="Int32" />
+    <Property Name="ClientName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ClientType" Relationship="IncubatorClientsModel.FK_Clients_ClientTypes" FromRole="Client" ToRole="ClientType" />
+    <NavigationProperty Name="WorkItems" Relationship="IncubatorClientsModel.FK_WorkItem_Clients" FromRole="Client" ToRole="WorkItem" />
+  </EntityType>
+  <EntityType Name="ClientType">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ClientTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Clients" Relationship="IncubatorClientsModel.FK_Clients_ClientTypes" FromRole="ClientType" ToRole="Client" />
+  </EntityType>
+  <EntityType Name="CompanyUser">
+    <Key>
+      <PropertyRef Name="CompanyUserID" />
+    </Key>
+    <Property Name="CompanyUserID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ComponentChangeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChangeType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ChangedBy" Type="Int32" />
+    <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ContentType" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="ComponentRef" Type="Guid" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="FieldMapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WorkItem" Relationship="IncubatorClientsModel.FK_Documents_WorkItem" FromRole="Document" ToRole="WorkItem" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Recipients" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GroupRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="Role" Type="Int32" />
+    <NavigationProperty Name="Group" Relationship="IncubatorClientsModel.FK_GroupRole_Groups" FromRole="GroupRole" ToRole="Group" />
+    <NavigationProperty Name="Role1" Relationship="IncubatorClientsModel.FK_GroupRole_Roles" FromRole="GroupRole" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="GroupRoles" Relationship="IncubatorClientsModel.FK_GroupRole_Groups" FromRole="Group" ToRole="GroupRole" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleType" Type="Int32" />
+    <NavigationProperty Name="GroupRoles" Relationship="IncubatorClientsModel.FK_GroupRole_Roles" FromRole="Role" ToRole="GroupRole" />
+    <NavigationProperty Name="UserRoles" Relationship="IncubatorClientsModel.FK_UserRole_Roles" FromRole="Role" ToRole="UserRole" />
+    <Property Name="RoleText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+    <NavigationProperty Name="Role" Relationship="IncubatorClientsModel.FK_UserRole_Roles" FromRole="UserRole" ToRole="Role" />
+    <NavigationProperty Name="User" Relationship="IncubatorClientsModel.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserLocked" Type="Boolean" />
+    <Property Name="Salt" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserRoles" Relationship="IncubatorClientsModel.FK_UserRole_User" FromRole="User" ToRole="UserRole" />
+    <Property Name="Fullname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <NavigationProperty Name="VarificationNumbers" Relationship="IncubatorClientsModel.FK_VarificationNumbers_Users" FromRole="User" ToRole="VarificationNumber" />
+  </EntityType>
+  <EntityType Name="WorkItemField">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="FieldCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldValue" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FieldSetCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ComponentRef" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="WorkItem" Relationship="IncubatorClientsModel.FK_WorkItemField_WorkItem" FromRole="WorkItemField" ToRole="WorkItem" />
+    <Property Name="WorkItemQuarterID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsRelated" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="WorkItemStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SatusCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Clients_ClientTypes">
+    <End Type="IncubatorClientsModel.ClientType" Role="ClientType" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientType">
+        <PropertyRef Name="ClientTypeID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="ClientTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupRole_Groups">
+    <End Type="IncubatorClientsModel.Group" Role="Group" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.GroupRole" Role="GroupRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupRole">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupRole_Roles">
+    <End Type="IncubatorClientsModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.GroupRole" Role="GroupRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupRole">
+        <PropertyRef Name="Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_Roles">
+    <End Type="IncubatorClientsModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.UserRole" Role="UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_User">
+    <End Type="IncubatorClientsModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.UserRole" Role="UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="WorkItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Client" Relationship="IncubatorClientsModel.FK_WorkItem_Clients" FromRole="WorkItem" ToRole="Client" />
+    <NavigationProperty Name="Documents" Relationship="IncubatorClientsModel.FK_Documents_WorkItem" FromRole="WorkItem" ToRole="Document" />
+    <NavigationProperty Name="WorkItemFields" Relationship="IncubatorClientsModel.FK_WorkItemField_WorkItem" FromRole="WorkItem" ToRole="WorkItemField" />
+    <Property Name="WorkItemQuardrantID" Type="Int32" />
+    <Property Name="IsChecked" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_WorkItem_Clients">
+    <End Type="IncubatorClientsModel.Client" Role="Client" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.WorkItem" Role="WorkItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="WorkItem">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_WorkItem">
+    <End Type="IncubatorClientsModel.WorkItem" Role="WorkItem" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="WorkItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkItemField_WorkItem">
+    <End Type="IncubatorClientsModel.WorkItem" Role="WorkItem" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.WorkItemField" Role="WorkItemField" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WorkItemField">
+        <PropertyRef Name="WorkItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="WorkItemStage">
+    <Key>
+      <PropertyRef Name="WorkItemStageID" />
+    </Key>
+    <Property Name="WorkItemStageID" Type="Int32" Nullable="false" />
+    <Property Name="StageID" Type="Int32" />
+    <Property Name="WorkItemID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Stage">
+    <Key>
+      <PropertyRef Name="StageID" />
+    </Key>
+    <Property Name="StageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StageText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StageCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IncubatorQuardrant">
+    <Key>
+      <PropertyRef Name="IncubatorQuardrantID" />
+    </Key>
+    <Property Name="IncubatorQuardrantID" Type="Int32" Nullable="false" />
+    <Property Name="IncubatorQuardrantText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IncubatorQuardrantCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ScoreCardValue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Milestone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QuarterID" Type="Int32" />
+    <Property Name="ShortDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IncubatorQuarter">
+    <Key>
+      <PropertyRef Name="IncubatorQuarterID" />
+    </Key>
+    <Property Name="Quarder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="IncubatorQuardrantID" Type="Int32" />
+    <Property Name="IncubatorQuarterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="IncubationStage">
+    <Key>
+      <PropertyRef Name="IncubationStageID" />
+    </Key>
+    <Property Name="IncubationStageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IncubationStageText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="WorkItemIncubationComment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CommentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="PriorityID" Type="Int32" />
+    <Property Name="ShortDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WorkItemIncubationStage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="IncubationSageID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentPriority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Priority" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EventInvitation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="EventID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="IncubatorEvent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="EventType" Type="Int32" />
+    <Property Name="EventDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WorkItemTimeLine">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="IncubationStageID" Type="Int32" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="WorkItemStageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EventGuest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="GuestName" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EventID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VarificationNumber">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="IncubatorClientsModel.FK_VarificationNumbers_Users" FromRole="VarificationNumber" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_VarificationNumbers_Users">
+    <End Type="IncubatorClientsModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="IncubatorClientsModel.VarificationNumber" Role="VarificationNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VarificationNumber">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DocumentReviewStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="DocumentReview" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="DocumentID" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="WorkItemDocumentStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="StageID" Type="Int32" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentRecomendation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommentID" Type="Int32" />
+    <Property Name="Response" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+</Schema>

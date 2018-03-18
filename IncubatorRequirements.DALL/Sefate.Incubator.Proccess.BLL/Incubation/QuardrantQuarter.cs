@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sefate.Incubator.Proccess.BLL.Incubation
+{
+    public class QuardrantQuarter
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int QuarterID { get; set; }
+    }
+}

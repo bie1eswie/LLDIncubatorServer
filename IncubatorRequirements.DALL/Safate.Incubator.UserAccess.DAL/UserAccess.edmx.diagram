@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2fa2424a2e0f4e3783466f113f278fc6" Name="Diagram1">
+        <EntityTypeShape EntityType="IncubatorClientsModel.Group" PointX="0.75" PointY="1.125" Width="1.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.GroupRole" PointX="3" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Role" PointX="0.75" PointY="3.875" Width="1.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.UserRole" PointX="3" PointY="3.875" Width="1.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.User" PointX="0.75" PointY="8.375" Width="1.5" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_GroupRole_Groups" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_GroupRole_Roles" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_UserRole_Roles" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_UserRole_User" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.Client" PointX="8" PointY="2.25" Width="1.5" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.ClientType" PointX="5.75" PointY="2.5" Width="1.5" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_Clients_ClientTypes" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.CompanyUser" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="IncubatorClientsModel.VarificationNumber" Width="1.5" PointX="3" PointY="9.25" />
+        <AssociationConnector Association="IncubatorClientsModel.FK_VarificationNumbers_Users" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

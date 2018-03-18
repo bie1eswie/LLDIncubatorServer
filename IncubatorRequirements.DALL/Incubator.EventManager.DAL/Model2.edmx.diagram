@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7ffee40cb7204749947acc7b4164ae38" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model2.Client" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.ClientType" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.CommentPriority" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.CommentRecomendation" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.CompanyUser" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.ComponentChangeType" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.DocumentReviewStatu" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.Document" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.DocumentStatu" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.Email" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.EventGuest" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.EventInvitation" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.GroupRole" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.Group" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.IncubationStage" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.IncubatorEvent" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model2.IncubatorQuardrant" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model2.IncubatorQuarter" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model2.InterventionReportField" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model2.InterventionReport" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.InterventionReportTemplate" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.Milestone" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.Role" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model2.Stage" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.UserRole" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model2.User" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model2.VarificationNumber" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemDocumentStatu" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemField" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemIncubationComment" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemIncubationStage" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Model2.WorkItem" Width="1.5" PointX="8.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemStage" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemStatu" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.WorkItemTimeLine" Width="1.5" PointX="14.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

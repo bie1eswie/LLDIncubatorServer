@@ -1,0 +1,5 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.BLL\bin\Debug\Incubator.EventManager.BLL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.BLL\bin\Debug\Incubator.EventManager.BLL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.BLL\obj\Debug\Incubator.EventManager.BLL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.BLL\obj\Debug\Incubator.EventManager.BLL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.BLL\obj\Debug\Incubator.EventManager.BLL.csproj.CoreCompileInputs.cache

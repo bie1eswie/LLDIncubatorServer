@@ -1,0 +1,14 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\NotificationManager.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\NotificationManager.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Release\NotificationManager.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Release\NotificationManager.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Release\NotificationManager.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\Sefate.Incubator.WorkItem.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\Sefate.Incubator.WorkItem.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\Sefate.Incubator.WorkItem.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\obj\Release\NotificationManager.csproj.CoreCompileInputs.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\Requirements.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\Requirements.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\NotificationManager\bin\Release\Requirements.DAL.dll.config

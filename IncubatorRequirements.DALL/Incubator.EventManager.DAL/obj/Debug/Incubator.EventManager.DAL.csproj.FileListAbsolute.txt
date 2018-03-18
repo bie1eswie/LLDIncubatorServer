@@ -1,0 +1,11 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\Incubator.EventManager.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\Incubator.EventManager.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\obj\Debug\Incubator.EventManager.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\obj\Debug\Incubator.EventManager.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\obj\Debug\Incubator.EventManager.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\Incubator.EventManager.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Incubator.EventManager.DAL\obj\Debug\Incubator.EventManager.DAL.csprojResolveAssemblyReference.cache

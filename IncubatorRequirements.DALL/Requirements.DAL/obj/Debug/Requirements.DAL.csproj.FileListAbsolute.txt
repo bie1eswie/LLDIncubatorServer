@@ -1,0 +1,14 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\obj\Debug\Requirements.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\obj\Debug\Requirements.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\Requirements.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\Requirements.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\Requirements.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\Sefate.Incubator.WorkItem.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\Sefate.Incubator.WorkItem.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\Sefate.Incubator.WorkItem.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\obj\Debug\Requirements.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Requirements.DAL\obj\Debug\Requirements.DAL.pdb

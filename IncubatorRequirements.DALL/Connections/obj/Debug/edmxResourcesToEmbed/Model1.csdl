@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IncubatorClientsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientType" Type="Int32" />
+    <Property Name="ClientName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ClientType1" Relationship="Self.FK_Clients_ClientTypes" FromRole="Clients" ToRole="ClientTypes" />
+    <NavigationProperty Name="WorkItems" Relationship="Self.FK_WorkItem_Clients" FromRole="Clients" ToRole="WorkItem" />
+  </EntityType>
+  <EntityType Name="ClientType">
+    <Key>
+      <PropertyRef Name="ClientTypeID" />
+    </Key>
+    <Property Name="ClientTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientType1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_ClientTypes" FromRole="ClientTypes" ToRole="Clients" />
+  </EntityType>
+  <EntityType Name="ComponentChangeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChangeType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ChangedBy" Type="Int32" />
+    <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="Binary" MaxLength="8000" FixedLength="true" />
+    <Property Name="ContentType" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="ComponentRef" Type="Guid" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="FieldMapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="URL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="WorkItem" Relationship="Self.FK_Documents_WorkItem" FromRole="Documents" ToRole="WorkItem" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Recipients" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GroupRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupRole1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="Role" Type="Int32" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_GroupRole_Groups" FromRole="GroupRole" ToRole="Groups" />
+    <NavigationProperty Name="Role1" Relationship="Self.FK_GroupRole_Roles" FromRole="GroupRole" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Group1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GroupRoles" Relationship="Self.FK_GroupRole_Groups" FromRole="Groups" ToRole="GroupRole" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleType" Type="Int32" />
+    <NavigationProperty Name="GroupRoles" Relationship="Self.FK_GroupRole_Roles" FromRole="Roles" ToRole="GroupRole" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRole_Roles" FromRole="Roles" ToRole="UserRole" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserLocked" Type="Boolean" />
+    <Property Name="Salt" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRole_User" FromRole="User" ToRole="UserRole" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_UserRole_Roles" FromRole="UserRole" ToRole="Roles" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
+  </EntityType>
+  <EntityType Name="WorkItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Client" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Client1" Relationship="Self.FK_WorkItem_Clients" FromRole="WorkItem" ToRole="Clients" />
+    <NavigationProperty Name="Documents" Relationship="Self.FK_Documents_WorkItem" FromRole="WorkItem" ToRole="Documents" />
+    <NavigationProperty Name="WorkItemStatu" Relationship="Self.FK_WorkItem_WorkItemStatus" FromRole="WorkItem" ToRole="WorkItemStatus" />
+    <NavigationProperty Name="WorkItemFields" Relationship="Self.FK_WorkItemField_WorkItem" FromRole="WorkItem" ToRole="WorkItemField" />
+  </EntityType>
+  <EntityType Name="WorkItemField">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkItemID" Type="Int32" />
+    <Property Name="FieldCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldValue" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FieldSetCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MapCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ComponentRef" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="WorkItem" Relationship="Self.FK_WorkItemField_WorkItem" FromRole="WorkItemField" ToRole="WorkItem" />
+  </EntityType>
+  <EntityType Name="WorkItemStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WorkItems" Relationship="Self.FK_WorkItem_WorkItemStatus" FromRole="WorkItemStatus" ToRole="WorkItem" />
+  </EntityType>
+  <Association Name="FK_Clients_ClientTypes">
+    <End Role="ClientTypes" Type="Self.ClientType" Multiplicity="0..1" />
+    <End Role="Clients" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientTypes">
+        <PropertyRef Name="ClientTypeID" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="ClientType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkItem_Clients">
+    <End Role="Clients" Type="Self.Client" Multiplicity="0..1" />
+    <End Role="WorkItem" Type="Self.WorkItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="WorkItem">
+        <PropertyRef Name="Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_WorkItem">
+    <End Role="WorkItem" Type="Self.WorkItem" Multiplicity="0..1" />
+    <End Role="Documents" Type="Self.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="WorkItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupRole_Groups">
+    <End Role="Groups" Type="Self.Group" Multiplicity="0..1" />
+    <End Role="GroupRole" Type="Self.GroupRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupRole">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupRole_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="GroupRole" Type="Self.GroupRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupRole">
+        <PropertyRef Name="Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkItem_WorkItemStatus">
+    <End Role="WorkItemStatus" Type="Self.WorkItemStatu" Multiplicity="0..1" />
+    <End Role="WorkItem" Type="Self.WorkItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItemStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WorkItem">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkItemField_WorkItem">
+    <End Role="WorkItem" Type="Self.WorkItem" Multiplicity="0..1" />
+    <End Role="WorkItemField" Type="Self.WorkItemField" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkItem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WorkItemField">
+        <PropertyRef Name="WorkItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IncubatorClientsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="ClientTypes" EntityType="Self.ClientType" />
+    <EntitySet Name="ComponentChangeTypes" EntityType="Self.ComponentChangeType" />
+    <EntitySet Name="Documents" EntityType="Self.Document" />
+    <EntitySet Name="Emails" EntityType="Self.Email" />
+    <EntitySet Name="GroupRoles" EntityType="Self.GroupRole" />
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <EntitySet Name="WorkItems" EntityType="Self.WorkItem" />
+    <EntitySet Name="WorkItemFields" EntityType="Self.WorkItemField" />
+    <EntitySet Name="WorkItemStatus" EntityType="Self.WorkItemStatu" />
+    <AssociationSet Name="FK_Clients_ClientTypes" Association="Self.FK_Clients_ClientTypes">
+      <End Role="ClientTypes" EntitySet="ClientTypes" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkItem_Clients" Association="Self.FK_WorkItem_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="WorkItem" EntitySet="WorkItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_WorkItem" Association="Self.FK_Documents_WorkItem">
+      <End Role="WorkItem" EntitySet="WorkItems" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupRole_Groups" Association="Self.FK_GroupRole_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="GroupRole" EntitySet="GroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupRole_Roles" Association="Self.FK_GroupRole_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="GroupRole" EntitySet="GroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_Roles" Association="Self.FK_UserRole_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRole" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserRole" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkItem_WorkItemStatus" Association="Self.FK_WorkItem_WorkItemStatus">
+      <End Role="WorkItemStatus" EntitySet="WorkItemStatus" />
+      <End Role="WorkItem" EntitySet="WorkItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkItemField_WorkItem" Association="Self.FK_WorkItemField_WorkItem">
+      <End Role="WorkItem" EntitySet="WorkItems" />
+      <End Role="WorkItemField" EntitySet="WorkItemFields" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

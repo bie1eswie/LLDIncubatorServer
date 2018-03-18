@@ -1,0 +1,12 @@
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\Safate.Incubator.UserAccess.DAL.dll.config
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\Safate.Incubator.UserAccess.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\Safate.Incubator.UserAccess.DAL.pdb
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\Dapper.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\EntityFramework.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\Dapper.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\EntityFramework.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\obj\Release\Safate.Incubator.UserAccess.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\obj\Release\Safate.Incubator.UserAccess.DAL.dll
+C:\Users\Thapelo\Documents\Visual Studio 2015\Projects\IncubatorRequirements.DALL\Safate.Incubator.UserAccess.DAL\obj\Release\Safate.Incubator.UserAccess.DAL.pdb

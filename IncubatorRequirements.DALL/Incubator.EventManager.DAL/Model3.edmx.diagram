@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="805d2041bd1347ec9d4185dcda91f217" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model3.Boolean" Width="1.5" PointX="10.75" PointY="13.625" />
+        <EntityTypeShape EntityType="Model3.CalculationMap" Width="1.5" PointX="5.75" PointY="16.625" />
+        <EntityTypeShape EntityType="Model3.Calculation" Width="1.5" PointX="12.75" PointY="13.625" />
+        <EntityTypeShape EntityType="Model3.ClientField" Width="1.5" PointX="3.75" PointY="21.625" />
+        <EntityTypeShape EntityType="Model3.ClientType" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="Model3.DropdownSetMap" Width="1.5" PointX="11" PointY="6" />
+        <EntityTypeShape EntityType="Model3.DropdownSet" Width="1.5" PointX="8.75" PointY="13" />
+        <EntityTypeShape EntityType="Model3.DropdownValue" Width="1.5" PointX="8.75" PointY="7" />
+        <EntityTypeShape EntityType="Model3.FieldSetGroupMap" Width="1.5" PointX="6" PointY="10.25" />
+        <EntityTypeShape EntityType="Model3.FieldSetGroup" Width="1.5" PointX="0.75" PointY="10.875" />
+        <EntityTypeShape EntityType="Model3.FieldSetMap" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="Model3.FieldSet" Width="1.5" PointX="3.75" PointY="1.875" />
+        <EntityTypeShape EntityType="Model3.FieldType" Width="1.5" PointX="1.5" PointY="22" />
+        <EntityTypeShape EntityType="Model3.IncubatorQuardrant" Width="1.5" PointX="13.75" PointY="5.625" />
+        <EntityTypeShape EntityType="Model3.QuardrantMap" Width="1.5" PointX="7.75" PointY="18.625" />
+        <EntityTypeShape EntityType="Model3.RejectionReason" Width="1.5" PointX="9.75" PointY="18.625" />
+        <EntityTypeShape EntityType="Model3.RequirementMap" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="Model3.Requirement" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="Model3.sysdiagram" Width="1.5" PointX="2.75" PointY="17.625" />
+        <EntityTypeShape EntityType="Model3.WorkItemStageMap" Width="1.5" PointX="11.75" PointY="18.625" />
+        <EntityTypeShape EntityType="Model3.WorkItemStageReason" Width="1.5" PointX="13.75" PointY="18.625" />
+        <EntityTypeShape EntityType="Model3.WorkItemStage" Width="1.5" PointX="14.75" PointY="10.625" />
+        <EntityTypeShape EntityType="Model3.WorkItemStatu" Width="1.5" PointX="15.75" PointY="5.625" />
+        <AssociationConnector Association="Model3.FK_ClientFieldFieldSetMap" />
+        <AssociationConnector Association="Model3.FK_ClientFieldFieldType" />
+        <AssociationConnector Association="Model3.FK_ClientTypeRequirementMap" />
+        <AssociationConnector Association="Model3.FK_DropdownSetDropdownSetMap" />
+        <AssociationConnector Association="Model3.FK_DropdownValueDropdownSetMap" />
+        <AssociationConnector Association="Model3.FK_FieldSetFieldSetGroupMap" />
+        <AssociationConnector Association="Model3.FK_FieldSetGroupFieldSetGroupMap" />
+        <AssociationConnector Association="Model3.FK_FieldSetGroupRequirementMap" />
+        <AssociationConnector Association="Model3.FK_FieldSetFieldSetMap" />
+        <AssociationConnector Association="Model3.FK_RequirementRequirementMap" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

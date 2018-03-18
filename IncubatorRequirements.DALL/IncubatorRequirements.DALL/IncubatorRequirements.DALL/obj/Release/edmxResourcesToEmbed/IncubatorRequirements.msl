@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IncubatorModelStoreContainer" CdmEntityContainer="IncubatorEntities">
+    <EntitySetMapping Name="FieldSets">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.FieldSet)">
+        <MappingFragment StoreEntitySet="Client_FieldSet">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="IsHidden_ID" ColumnName="IsHidden_ID" />
+          <ScalarProperty Name="IsHidden_Name" ColumnName="IsHidden_Name" />
+          <ScalarProperty Name="IsHidden_Code" ColumnName="IsHidden_Code" />
+          <ScalarProperty Name="IsCalculated_ID" ColumnName="IsCalculated_ID" />
+          <ScalarProperty Name="IsCalculated_Name" ColumnName="IsCalculated_Name" />
+          <ScalarProperty Name="IsCalculated_Code" ColumnName="IsCalculated_Code" />
+          <ScalarProperty Name="PrePopulate_ID" ColumnName="PrePopulate_ID" />
+          <ScalarProperty Name="PrePopulate_Name" ColumnName="PrePopulate_Name" />
+          <ScalarProperty Name="PrePopulate_Code" ColumnName="PrePopulate_Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calculations">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.Calculation)">
+        <MappingFragment StoreEntitySet="Client_Calculation">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalculationMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.CalculationMap)">
+        <MappingFragment StoreEntitySet="Client_CalculationMap">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="Caculation_ID" ColumnName="Caculation_ID" />
+          <ScalarProperty Name="Caculation_Name" ColumnName="Caculation_Name" />
+          <ScalarProperty Name="Caculation_Code" ColumnName="Caculation_Code" />
+          <ScalarProperty Name="Parameter_ID" ColumnName="Parameter_ID" />
+          <ScalarProperty Name="Parameter_Name" ColumnName="Parameter_Name" />
+          <ScalarProperty Name="Parameter_Code" ColumnName="Parameter_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldSetGroups">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.FieldSetGroup)">
+        <MappingFragment StoreEntitySet="Client_FieldSetGroup">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequirementMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.RequirementMap)">
+        <MappingFragment StoreEntitySet="Client_RequirementMap">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="FieldSetGroupOrder" ColumnName="FieldSetGroupOrder" />
+          <ScalarProperty Name="RequirementsTab_ID" ColumnName="RequirementsTab_ID" />
+          <ScalarProperty Name="RequirementsTab_Name" ColumnName="RequirementsTab_Name" />
+          <ScalarProperty Name="RequirementsTab_Code" ColumnName="RequirementsTab_Code" />
+          <ScalarProperty Name="WorkItemStatus_ID" ColumnName="WorkItemStatus_ID" />
+          <ScalarProperty Name="WorkItemStatus_Name" ColumnName="WorkItemStatus_Name" />
+          <ScalarProperty Name="WorkItemStatus_Code" ColumnName="WorkItemStatus_Code" />
+          <ScalarProperty Name="ClientType_ID" ColumnName="ClientType_ID" />
+          <ScalarProperty Name="ClientType_Name" ColumnName="ClientType_Name" />
+          <ScalarProperty Name="ClientType_Code" ColumnName="ClientType_Code" />
+          <ScalarProperty Name="FieldSetGroup_ID" ColumnName="FieldSetGroup_ID" />
+          <ScalarProperty Name="FieldSetGroup_Name" ColumnName="FieldSetGroup_Name" />
+          <ScalarProperty Name="FieldSetGroup_Code" ColumnName="FieldSetGroup_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldSetGroupMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.FieldSetGroupMap)">
+        <MappingFragment StoreEntitySet="Client_FieldSetGroup_Map">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="FieldSetOrder" ColumnName="FieldSetOrder" />
+          <ScalarProperty Name="FieldSetGroup_ID" ColumnName="FieldSetGroup_ID" />
+          <ScalarProperty Name="FieldSetGroup_Name" ColumnName="FieldSetGroup_Name" />
+          <ScalarProperty Name="FieldSetGroup_Code" ColumnName="FieldSetGroup_Code" />
+          <ScalarProperty Name="FieldSet_ID" ColumnName="FieldSet_ID" />
+          <ScalarProperty Name="FieldSet_Name" ColumnName="FieldSet_Name" />
+          <ScalarProperty Name="FieldSet_Code" ColumnName="FieldSet_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientFields">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.ClientField)">
+        <MappingFragment StoreEntitySet="ClientField">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="FieldType_ID" ColumnName="FieldType_ID" />
+          <ScalarProperty Name="FieldType_Name" ColumnName="FieldType_Name" />
+          <ScalarProperty Name="FieldType_Code" ColumnName="FieldType_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.FieldType)">
+        <MappingFragment StoreEntitySet="Client_FieldType">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldSetMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.FieldSetMap)">
+        <MappingFragment StoreEntitySet="Client_FieldSetMap">
+          <ScalarProperty Name="FieldSetID" ColumnName="FieldSet_ID" />
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="FieldScore" ColumnName="FieldScore" />
+          <ScalarProperty Name="Caculation_ID" ColumnName="Caculation_ID" />
+          <ScalarProperty Name="Caculation_Name" ColumnName="Caculation_Name" />
+          <ScalarProperty Name="Caculation_Code" ColumnName="Caculation_Code" />
+          <ScalarProperty Name="IsRequired_ID" ColumnName="IsRequired_ID" />
+          <ScalarProperty Name="IsRequired_Name" ColumnName="IsRequired_Name" />
+          <ScalarProperty Name="IsRequired_Code" ColumnName="IsRequired_Code" />
+          <ScalarProperty Name="FieldOrder" ColumnName="FieldOrder" />
+          <ScalarProperty Name="ToolTip" ColumnName="ToolTip" />
+          <ScalarProperty Name="FieldSet_Name" ColumnName="FieldSet_Name" />
+          <ScalarProperty Name="FieldSet_Code" ColumnName="FieldSet_Code" />
+          <ScalarProperty Name="DropdownSet_ID" ColumnName="DropdownSet_ID" />
+          <ScalarProperty Name="DropdownSet_Name" ColumnName="DropdownSet_Name" />
+          <ScalarProperty Name="DropdownSet_Code" ColumnName="DropdownSet_Code" />
+          <ScalarProperty Name="Field_ID" ColumnName="Field_ID" />
+          <ScalarProperty Name="Field_Name" ColumnName="Field_Name" />
+          <ScalarProperty Name="Field_Code" ColumnName="Field_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemStageReasons">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.WorkItemStageReason)">
+        <MappingFragment StoreEntitySet="Client_WorkItemStageReason">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+          <ScalarProperty Name="Stage_Code" ColumnName="Stage_Code" />
+          <ScalarProperty Name="Reason_ID" ColumnName="Reason_ID" />
+          <ScalarProperty Name="Reason_Name" ColumnName="Reason_Name" />
+          <ScalarProperty Name="Reason_Code" ColumnName="Reason_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncubatorQuardrants">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.IncubatorQuardrant)">
+        <MappingFragment StoreEntitySet="Client_IncubatorQuardrant">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuardrantMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.QuardrantMap)">
+        <MappingFragment StoreEntitySet="Client_QuardrantMap">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="FieldSetGroupOrder" ColumnName="FieldSetGroupOrder" />
+          <ScalarProperty Name="RequirementsTab_ID" ColumnName="RequirementsTab_ID" />
+          <ScalarProperty Name="RequirementsTab_Name" ColumnName="RequirementsTab_Name" />
+          <ScalarProperty Name="RequirementsTab_Code" ColumnName="RequirementsTab_Code" />
+          <ScalarProperty Name="Quadrant_ID" ColumnName="Quadrant_ID" />
+          <ScalarProperty Name="Quadrant_Name" ColumnName="Quadrant_Name" />
+          <ScalarProperty Name="Quadrant_Code" ColumnName="Quadrant_Code" />
+          <ScalarProperty Name="FieldSetGroup_ID" ColumnName="FieldSetGroup_ID" />
+          <ScalarProperty Name="FieldSetGroup_Name" ColumnName="FieldSetGroup_Name" />
+          <ScalarProperty Name="FieldSetGroup_Code" ColumnName="FieldSetGroup_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Booleans">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.Boolean)">
+        <MappingFragment StoreEntitySet="Client_Boolean">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DropdownValues">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.DropdownValue)">
+        <MappingFragment StoreEntitySet="Client_DropdownValue">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DropdownSetMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.DropdownSetMap)">
+        <MappingFragment StoreEntitySet="Client_DropdownSetMap">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ScoreCard" ColumnName="ScoreCard" />
+          <ScalarProperty Name="FieldSetGroup_ID" ColumnName="FieldSetGroup_ID" />
+          <ScalarProperty Name="FieldSetGroup_Name" ColumnName="FieldSetGroup_Name" />
+          <ScalarProperty Name="FieldSetGroup_Code" ColumnName="FieldSetGroup_Code" />
+          <ScalarProperty Name="DropdownSet_ID" ColumnName="DropdownSet_ID" />
+          <ScalarProperty Name="DropdownSet_Name" ColumnName="DropdownSet_Name" />
+          <ScalarProperty Name="DropdownSet_Code" ColumnName="DropdownSet_Code" />
+          <ScalarProperty Name="DropdownValue_ID" ColumnName="DropdownValue_ID" />
+          <ScalarProperty Name="DropdownValue_Name" ColumnName="DropdownValue_Name" />
+          <ScalarProperty Name="DropdownValue_Code" ColumnName="DropdownValue_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RejectionReasons">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.RejectionReason)">
+        <MappingFragment StoreEntitySet="Client_RejectionReason">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.ClientType)">
+        <MappingFragment StoreEntitySet="Client_ClientType">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemStages">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.WorkItemStages)">
+        <MappingFragment StoreEntitySet="Client_WorkItemStages">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="PreviousStage_ID" ColumnName="PreviousStage_ID" />
+          <ScalarProperty Name="PreviousStage_Name" ColumnName="PreviousStage_Name" />
+          <ScalarProperty Name="PreviousStage_Code" ColumnName="PreviousStage_Code" />
+          <ScalarProperty Name="HasDocuments_ID" ColumnName="HasDocuments_ID" />
+          <ScalarProperty Name="HasDocuments_Name" ColumnName="HasDocuments_Name" />
+          <ScalarProperty Name="HasDocuments_Code" ColumnName="HasDocuments_Code" />
+          <ScalarProperty Name="BussinessCanEdit_ID" ColumnName="BussinessCanEdit_ID" />
+          <ScalarProperty Name="BussinessCanEdit_Name" ColumnName="BussinessCanEdit_Name" />
+          <ScalarProperty Name="BussinessCanEdit_Code" ColumnName="BussinessCanEdit_Code" />
+          <ScalarProperty Name="NextSage_ID" ColumnName="NextSage_ID" />
+          <ScalarProperty Name="NextSage_Name" ColumnName="NextSage_Name" />
+          <ScalarProperty Name="NextSage_Code" ColumnName="NextSage_Code" />
+          <ScalarProperty Name="UserCanEdit_ID" ColumnName="UserCanEdit_ID" />
+          <ScalarProperty Name="UserCanEdit_Name" ColumnName="UserCanEdit_Name" />
+          <ScalarProperty Name="UserCanEdit_Code" ColumnName="UserCanEdit_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemStageMaps">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.WorkItemStageMap)">
+        <MappingFragment StoreEntitySet="Client_WorkItemStageMap">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="WorkItemStage_ID" ColumnName="WorkItemStage_ID" />
+          <ScalarProperty Name="WorkItemStage_Name" ColumnName="WorkItemStage_Name" />
+          <ScalarProperty Name="WorkItemStage_Code" ColumnName="WorkItemStage_Code" />
+          <ScalarProperty Name="ActionTeam_ID" ColumnName="ActionTeam_ID" />
+          <ScalarProperty Name="ActionTeam_Name" ColumnName="ActionTeam_Name" />
+          <ScalarProperty Name="ActionTeam_Code" ColumnName="ActionTeam_Code" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requirements">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.Requirement)">
+        <MappingFragment StoreEntitySet="Client_Requirement">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DropdownSets">
+      <EntityTypeMapping TypeName="IsTypeOf(IncubatorModel.DropdownSet)">
+        <MappingFragment StoreEntitySet="Client_DropdownSet">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkItemStatus">
+      <EntityTypeMapping TypeName="IncubatorModel.WorkItemStatu">
+        <MappingFragment StoreEntitySet="Client_WorkItemStatu">
+          <ScalarProperty Name="ValidationStatus" ColumnName="ValidationStatus" />
+          <ScalarProperty Name="LastChgVersionNumber" ColumnName="LastChgVersionNumber" />
+          <ScalarProperty Name="LastChgUserName" ColumnName="LastChgUserName" />
+          <ScalarProperty Name="LastChgDateTime" ColumnName="LastChgDateTime" />
+          <ScalarProperty Name="EnterVersionNumber" ColumnName="EnterVersionNumber" />
+          <ScalarProperty Name="EnterUserName" ColumnName="EnterUserName" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="ChangeTrackingMask" ColumnName="ChangeTrackingMask" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VersionFlag" ColumnName="VersionFlag" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="MUID" ColumnName="MUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
